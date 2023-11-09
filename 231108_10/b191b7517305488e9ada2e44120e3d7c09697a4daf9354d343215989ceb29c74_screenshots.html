@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="28afbffec5ff69c830eefc330c85074ca8b55c6eefdba67fe5d9ad633578044e.html">Mambu Consult Client JM Uat</a></span>
+                > <span class="truncate-60"><a
+                    href="b191b7517305488e9ada2e44120e3d7c09697a4daf9354d343215989ceb29c74.html">Test new pay apply repayment JM uat </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 08-11-2023 20:21</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Mambu Consult Client JM Uat</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="c68fd6639ab29c4b0ac02a78bc39f4e22557bcaa40ef14c903ac0e584626edfe.html">1 To 2 Minutes
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="94067c49c42f76c14567b3e7719143ed6151f30a9bf3099306d228870d14b2ce.html">Mambu Jm
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5276ffea8a2428b56d4973ebed72fb09ed046f32ffbabcac971aba2dd0018a55.html">New Pay Repayment Excel
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Test new pay apply repayment JM uat
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Read data from excel to create &lt;row&gt; PaymentsAccounting models<br>Given User navigate into Mambu "&lt;country&gt;" with the credentials<br>When consult the accountId exist values<br>And select the option of subMenu<br>And the user new pay apply repayment<br>And select the option of menu and consult<br>Then validate pay apply repayment</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="790afa1b7a47f724924655fd995dabdc49ce01e4b441bbd81964c26f9be04abb.png" title=" 1: Test new pay apply repayment JM uat ({country=Jamaica, row=10})" width="0"/>
+                <img src="790afa1b7a47f724924655fd995dabdc49ce01e4b441bbd81964c26f9be04abb.png" title=" Given Read data from excel to create 10 PaymentsAccounting models" width="0"/>
+                <img src="790afa1b7a47f724924655fd995dabdc49ce01e4b441bbd81964c26f9be04abb.png" title=" Given User navigate into Mambu &quot;Jamaica&quot; with the credentials" width="0"/>
+                <img src="790afa1b7a47f724924655fd995dabdc49ce01e4b441bbd81964c26f9be04abb.png" title=" Admin navigate" width="0"/>
+                <img src="790afa1b7a47f724924655fd995dabdc49ce01e4b441bbd81964c26f9be04abb.png" title=" admin opens the browser at https://unijmuat10.sandbox.mambu.com/#" width="0"/>
+                <img src="b2d8d3a22dda692ba9f1e36c4aa1c926e2c219c43edc6cc467e6d796bef3e409.png" title=" admin opens the browser at https://unijmuat10.sandbox.mambu.com/# (completed)" width="0"/>
+                <img src="6d588212976900d90e0b60133835730ac276e67d384e01f6525dba94b2faf026.png" title=" admin clicks on BUTTON LOGIN" width="0"/>
+                <img src="cb54a832d51e8b3cb9f2604b94df0c1ec34ce2ac02dc27cd5943d9b339cd0ae2.png" title=" admin clicks on BUTTON LOGIN (completed)" width="0"/>
+                <img src="be45014b9e242f3c41dd5a977f720a7c8816f74ede8994bff5bf6cb6476c32a0.png" title=" admin enters 'winder_rivera@unicomer.com' into ENTER THE USER" width="0"/>
+                <img src="d99e829bcd57332e304b91fc1ce000830dc9a2f84026a61ca112be80d3f26ae6.png" title=" admin enters 'winder_rivera@unicomer.com' into ENTER THE USER (completed)" width="0"/>
+                <img src="d99e829bcd57332e304b91fc1ce000830dc9a2f84026a61ca112be80d3f26ae6.png" title=" admin clicks on BUTTON SUBMIT" width="0"/>
+                <img src="38b26f436342e9216fd8360ac6c2d4dad40363781f1cf5d3db871a78cbf0cbff.png" title=" admin clicks on BUTTON SUBMIT (completed)" width="0"/>
+                <img src="38b26f436342e9216fd8360ac6c2d4dad40363781f1cf5d3db871a78cbf0cbff.png" title=" admin enters 'Wr123456$$' into ENTER THE PASSWORD" width="0"/>
+                <img src="6fff2e83009f675ad919ef274bbb167836decb5c3316d9267c669e2782014875.png" title=" admin enters 'Wr123456$$' into ENTER THE PASSWORD (completed)" width="0"/>
+                <img src="6fff2e83009f675ad919ef274bbb167836decb5c3316d9267c669e2782014875.png" title=" admin clicks on BUTTON SUBMIT" width="0"/>
+                <img src="4d4cf49c9eb2ea7e7e462fbacd4049442fd219c902f488bf42bb9bbd3cb6280b.png" title=" admin clicks on BUTTON SUBMIT (completed)" width="0"/>
+                <img src="4d4cf49c9eb2ea7e7e462fbacd4049442fd219c902f488bf42bb9bbd3cb6280b.png" title=" admin clicks on BUTTON NOT ACTIVE" width="0"/>
+                <img src="688999f2c4b69a03e5dd10285ac4a5106a8652379544dee9b5f6c92fc16633db.png" title=" admin clicks on BUTTON NOT ACTIVE (completed)" width="0"/>
+                <img src="56c29d9b4ba562a16a92d96fe54f19941f082151b2766416ea4a8f0577519df2.png" title=" Admin navigate (completed)" width="0"/>
+                <img src="56c29d9b4ba562a16a92d96fe54f19941f082151b2766416ea4a8f0577519df2.png" title=" Given User navigate into Mambu &quot;Jamaica&quot; with the credentials (completed)" width="0"/>
+                <img src="56c29d9b4ba562a16a92d96fe54f19941f082151b2766416ea4a8f0577519df2.png" title=" When consult the accountId exist values" width="0"/>
+                <img src="074cad3908ad692481c1c20171e57ae15ba971e3ccb71dbbe919b4cff5c39077.png" title=" Admin consult document" width="0"/>
+                <img src="074cad3908ad692481c1c20171e57ae15ba971e3ccb71dbbe919b4cff5c39077.png" title=" admin enters 'KLSQ426' into ENTER TO SEARCH BOX" width="0"/>
+                <img src="1a6fcccb952821a0c3e7a319e68f32804938f36a45f8bc02418965e349db0f6a.png" title=" admin enters 'KLSQ426' into ENTER TO SEARCH BOX (completed)" width="0"/>
+                <img src="1a6fcccb952821a0c3e7a319e68f32804938f36a45f8bc02418965e349db0f6a.png" title=" admin clicks on CLIENT BOX" width="0"/>
+                <img src="d356fe2bc53acc81631b5c51753ab5f63f9809d4a26e27b69c3ffee7fecd6fac.png" title=" admin clicks on CLIENT BOX (completed)" width="0"/>
+                <img src="d356fe2bc53acc81631b5c51753ab5f63f9809d4a26e27b69c3ffee7fecd6fac.png" title=" Admin consult document (completed)" width="0"/>
+                <img src="1e253bb36f7ccc1c6d3cd14264d5507878d13a6e42850f80a7fad8a9ec2aa005.png" title=" When consult the accountId exist values (completed)" width="0"/>
+                <img src="1e253bb36f7ccc1c6d3cd14264d5507878d13a6e42850f80a7fad8a9ec2aa005.png" title=" And select the option of subMenu" width="0"/>
+                <img src="00d226f5b645ad7493dd080328b92ad809f6b2b3c6ece80597166892d6232543.png" title=" Admin navigate sub menu option" width="0"/>
+                <img src="8b595a80ce06276e448c8c0e4483e61bdcf087ae5bf8bd02f04b3d1a6c01e289.png" title=" admin clicks on OPTION SUBMENU" width="0"/>
+                <img src="1820930198dfd638c5ae4847f3d153206eb04fe28dfcc80d3f878ae94330cb69.png" title=" admin clicks on OPTION SUBMENU (completed)" width="0"/>
+                <img src="1820930198dfd638c5ae4847f3d153206eb04fe28dfcc80d3f878ae94330cb69.png" title=" Admin navigate sub menu option (completed)" width="0"/>
+                <img src="52451d8ce84a5428f9d3244e9129b7fd3fcf57088efbbc7e4735269402fb575b.png" title=" And select the option of subMenu (completed)" width="0"/>
+                <img src="52451d8ce84a5428f9d3244e9129b7fd3fcf57088efbbc7e4735269402fb575b.png" title=" And the user new pay apply repayment" width="0"/>
+                <img src="6a5e98966eb00ffc422c84c02f02b200f8991e84ed3bad83452060c91bf14834.png" title=" Admin new pay repayment" width="0"/>
+                <img src="6a5e98966eb00ffc422c84c02f02b200f8991e84ed3bad83452060c91bf14834.png" title=" admin clicks on  OPTION ENTER REPAYMENT" width="0"/>
+                <img src="1367cf3767d4025e40c63e1739755dd43564a9c0454885fbbffe2374a3b52a01.png" title=" admin clicks on  OPTION ENTER REPAYMENT (completed)" width="0"/>
+                <img src="1367cf3767d4025e40c63e1739755dd43564a9c0454885fbbffe2374a3b52a01.png" title=" admin enters '1515.38' into  AMOUNT PAY" width="0"/>
+                <img src="bcb75bc8086fd603d694fd7de7a4b20c78a2dea439feb6700972be4dac78d4be.png" title=" admin enters '1515.38' into  AMOUNT PAY (completed)" width="0"/>
+                <img src="bcb75bc8086fd603d694fd7de7a4b20c78a2dea439feb6700972be4dac78d4be.png" title=" admin clicks on TYPE CHANNEL" width="0"/>
+                <img src="73ef3e294841b2450fb76628e91f16f14f8da10163efffe4538cd4947f68194e.png" title=" admin clicks on TYPE CHANNEL (completed)" width="0"/>
+                <img src="73ef3e294841b2450fb76628e91f16f14f8da10163efffe4538cd4947f68194e.png" title=" admin clicks on  OPTION CLOSURE_ACCOUNT_CASH" width="0"/>
+                <img src="f386c20ee02b826194b0da9d45dbc9b1b575ce2c7a87e35ea28c9932f75934ea.png" title=" admin clicks on  OPTION CLOSURE_ACCOUNT_CASH (completed)" width="0"/>
+                <img src="c8650c527afd9311a2961d06cae0c195eddf7b21d11dc556c701049c94de4339.png" title=" admin clicks on BUTTON NOTES" width="0"/>
+                <img src="859129e738ee46e0191a7980035061752249f758e4821aa939ffe622882c239c.png" title=" admin clicks on BUTTON NOTES (completed)" width="0"/>
+                <img src="859129e738ee46e0191a7980035061752249f758e4821aa939ffe622882c239c.png" title=" admin enters 'GDIEC-1183 Test of channel' into  ENTER THE NOTES" width="0"/>
+                <img src="7322fd3b0b660c087f64a303f50c816295602c38c187e19e8836a73b58a7627f.png" title=" admin enters 'GDIEC-1183 Test of channel' into  ENTER THE NOTES (completed)" width="0"/>
+                <img src="7322fd3b0b660c087f64a303f50c816295602c38c187e19e8836a73b58a7627f.png" title=" admin clicks on BUTTON APPLY REPAYMENT" width="0"/>
+                <img src="2a6ed7c444f15f62cfa8be5372e14b24cd00ce4c5cc3220cfbdde73fef1301fe.png" title=" admin clicks on BUTTON APPLY REPAYMENT (completed)" width="0"/>
+                <img src="37276435f1046af2ff3eb2e34de3b25e9e5f8f3331aa7cbbf6ef18b6ee101204.png" title=" Admin new pay repayment (completed)" width="0"/>
+                <img src="37276435f1046af2ff3eb2e34de3b25e9e5f8f3331aa7cbbf6ef18b6ee101204.png" title=" Admin text capture validation" width="0"/>
+                <img src="545a19ba9ac19132c829e6d71b2f152e84f0704d658647d9706b25adbac0cb8e.png" title=" Admin text capture validation (completed)" width="0"/>
+                <img src="545a19ba9ac19132c829e6d71b2f152e84f0704d658647d9706b25adbac0cb8e.png" title=" Admin navigate action view" width="0"/>
+                <img src="545a19ba9ac19132c829e6d71b2f152e84f0704d658647d9706b25adbac0cb8e.png" title=" admin hovers over #target" width="0"/>
+                <img src="37276435f1046af2ff3eb2e34de3b25e9e5f8f3331aa7cbbf6ef18b6ee101204.png" title=" admin hovers over #target (completed)" width="0"/>
+                <img src="37276435f1046af2ff3eb2e34de3b25e9e5f8f3331aa7cbbf6ef18b6ee101204.png" title=" admin clicks on  BUTTON ACTION" width="0"/>
+                <img src="0785daceffc148a9ea95c7fd608100319f738414cc2ac4d445da2e1aa82c720e.png" title=" admin clicks on  BUTTON ACTION (completed)" width="0"/>
+                <img src="0785daceffc148a9ea95c7fd608100319f738414cc2ac4d445da2e1aa82c720e.png" title=" admin clicks on  BUTTON VIEW TRANSACTION" width="0"/>
+                <img src="e1f86386a6fe9484e18f66cfac4455a8d6a32b885fcbf0789377e85b78b3f2cb.png" title=" admin clicks on  BUTTON VIEW TRANSACTION (completed)" width="0"/>
+                <img src="e1f86386a6fe9484e18f66cfac4455a8d6a32b885fcbf0789377e85b78b3f2cb.png" title=" Admin navigate action view (completed)" width="0"/>
+                <img src="be6c511e1d1afe6ad6c053881a4273d69dc43b48d288d76c04b6adf0e850b003.png" title=" Admin text capture validation view" width="0"/>
+                <img src="541db4f50039cd3e2ffad3c3b4dea5ba29ef2368e0599e323688105b8bdd1dc0.png" title=" admin clicks on  BUTTON CLOSE VIEW" width="0"/>
+                <img src="c75d240cc72e274e03223f3679a7c363f3b4af8667d3ab6f7fb51c919a8891a9.png" title=" admin clicks on  BUTTON CLOSE VIEW (completed)" width="0"/>
+                <img src="c75d240cc72e274e03223f3679a7c363f3b4af8667d3ab6f7fb51c919a8891a9.png" title=" Admin text capture validation view (completed)" width="0"/>
+                <img src="c75d240cc72e274e03223f3679a7c363f3b4af8667d3ab6f7fb51c919a8891a9.png" title=" And the user new pay apply repayment (completed)" width="0"/>
+                <img src="c75d240cc72e274e03223f3679a7c363f3b4af8667d3ab6f7fb51c919a8891a9.png" title=" And select the option of menu and consult" width="0"/>
+                <img src="c75d240cc72e274e03223f3679a7c363f3b4af8667d3ab6f7fb51c919a8891a9.png" title=" Admin navigate menu mambu" width="0"/>
+                <img src="c75d240cc72e274e03223f3679a7c363f3b4af8667d3ab6f7fb51c919a8891a9.png" title=" admin clicks on OPTION MENU" width="0"/>
+                <img src="aad1defb246aeec26e9182e77cb971dca33542849d08560dca676d4836eb2bfe.png" title=" admin clicks on OPTION MENU (completed)" width="0"/>
+                <img src="aad1defb246aeec26e9182e77cb971dca33542849d08560dca676d4836eb2bfe.png" title=" Admin navigate menu mambu (completed)" width="0"/>
+                <img src="aad1defb246aeec26e9182e77cb971dca33542849d08560dca676d4836eb2bfe.png" title=" Admin navigate menu accounting" width="0"/>
+                <img src="aad1defb246aeec26e9182e77cb971dca33542849d08560dca676d4836eb2bfe.png" title=" admin clicks on OPTION MENU" width="0"/>
+                <img src="5f7ea120b4bf5083b48630b20c5c6f6f16b8bda7fd88bbf5045cd254affc195e.png" title=" admin clicks on OPTION MENU (completed)" width="0"/>
+                <img src="5f7ea120b4bf5083b48630b20c5c6f6f16b8bda7fd88bbf5045cd254affc195e.png" title=" Admin navigate menu accounting (completed)" width="0"/>
+                <img src="a647155120dc6bc8936dee7663ca9238b6fda1aed4592fbebcd9c552690e2e84.png" title=" Admin consult journal entries" width="0"/>
+                <img src="0a476769847a8fd86bf3462ea84b94ba6ed3471883b35b8ee0ce4af373791a1c.png" title=" admin clicks on  BUTTON FILTER" width="0"/>
+                <img src="9f55e6edf91efbeb021b840e4bd2580a2816d577a043005b75a9c5371b3bf7c0.png" title=" admin clicks on  BUTTON FILTER (completed)" width="0"/>
+                <img src="9f55e6edf91efbeb021b840e4bd2580a2816d577a043005b75a9c5371b3bf7c0.png" title=" admin clicks on OPTION MENU" width="0"/>
+                <img src="a80a3b8c5d96dce71ad71f9350649141688d1bd873246cf23f7a41c4e8758ff9.png" title=" admin clicks on OPTION MENU (completed)" width="0"/>
+                <img src="a80a3b8c5d96dce71ad71f9350649141688d1bd873246cf23f7a41c4e8758ff9.png" title=" admin clicks on  DRPD CUSTOM JOURNAL" width="0"/>
+                <img src="a28ab304d8ccac63ef873d46bd1c6077aeb5f8645339fce099f1f32be9b7a134.png" title=" admin clicks on  DRPD CUSTOM JOURNAL (completed)" width="0"/>
+                <img src="a28ab304d8ccac63ef873d46bd1c6077aeb5f8645339fce099f1f32be9b7a134.png" title=" admin clicks on LIST ELEMENTS CLOSURE ACCOUNT CASH" width="0"/>
+                <img src="f3f2cfa4356357b1bdbee048968da177968b715610309f4ec197ab66548bd584.png" title=" admin clicks on LIST ELEMENTS CLOSURE ACCOUNT CASH (completed)" width="0"/>
+                <img src="f3f2cfa4356357b1bdbee048968da177968b715610309f4ec197ab66548bd584.png" title=" admin enters '87710172' into  ENTER THE TRANSACTION ID" width="0"/>
+                <img src="66a76d9bc219d02be557fd568dccf85ed8861f5513b21f3973331a755ce2be7e.png" title=" admin enters '87710172' into  ENTER THE TRANSACTION ID (completed)" width="0"/>
+                <img src="66a76d9bc219d02be557fd568dccf85ed8861f5513b21f3973331a755ce2be7e.png" title=" admin clicks on  BUTTON APPLY CUSTOM JOURNAL" width="0"/>
+                <img src="4306d55727797896061d60413da6af4a4afdaac7fefc78fbfc059618219b7238.png" title=" admin clicks on  BUTTON APPLY CUSTOM JOURNAL (completed)" width="0"/>
+                <img src="4306d55727797896061d60413da6af4a4afdaac7fefc78fbfc059618219b7238.png" title=" admin clicks on  BUTTON APPLY CUSTOM JOURNAL" width="0"/>
+                <img src="6a0b9ad15b2f6bb6a34750c7fb0a47402048b2d60a4cdfb08fa44d4c5d77f218.png" title=" admin clicks on  BUTTON APPLY CUSTOM JOURNAL (completed)" width="0"/>
+                <img src="6a0b9ad15b2f6bb6a34750c7fb0a47402048b2d60a4cdfb08fa44d4c5d77f218.png" title=" admin enters 'GL Account ID' then hits [TAB] into  DRPD AVAILABLE COLUMNS" width="0"/>
+                <img src="15eb8017b66fb9b8da726b2b443f299fa42525b6f1c8dad461919b2ba6e5c078.png" title=" admin enters 'GL Account ID' then hits [TAB] into  DRPD AVAILABLE COLUMNS (completed)" width="0"/>
+                <img src="15eb8017b66fb9b8da726b2b443f299fa42525b6f1c8dad461919b2ba6e5c078.png" title=" admin enters 'Type (Transaction)' then hits [TAB] into  DRPD AVAILABLE COLUMNS" width="0"/>
+                <img src="793b7a0f37232e5111e5fec7b236fab67a24efd4d0c6f974d4bdc35b2031ea35.png" title=" admin enters 'Type (Transaction)' then hits [TAB] into  DRPD AVAILABLE COLUMNS (completed)" width="0"/>
+                <img src="793b7a0f37232e5111e5fec7b236fab67a24efd4d0c6f974d4bdc35b2031ea35.png" title=" admin enters 'Channel (Transaction)' then hits [TAB] into  DRPD AVAILABLE COLUMNS" width="0"/>
+                <img src="888344ee243d0b33763b1ae562a967c56f0871cc3b7e8a8e6cc599431ebdb60c.png" title=" admin enters 'Channel (Transaction)' then hits [TAB] into  DRPD AVAILABLE COLUMNS (completed)" width="0"/>
+                <img src="888344ee243d0b33763b1ae562a967c56f0871cc3b7e8a8e6cc599431ebdb60c.png" title=" admin clicks on  BUTTON APPLY CHANGES" width="0"/>
+                <img src="83faa6b0c443c584b6360aafe1be2d7fde4aabf4d109725b9bc44d03ed497d95.png" title=" admin clicks on  BUTTON APPLY CHANGES (completed)" width="0"/>
+                <img src="83faa6b0c443c584b6360aafe1be2d7fde4aabf4d109725b9bc44d03ed497d95.png" title=" Admin consult journal entries (completed)" width="0"/>
+                <img src="83faa6b0c443c584b6360aafe1be2d7fde4aabf4d109725b9bc44d03ed497d95.png" title=" And select the option of menu and consult (completed)" width="0"/>
+                <img src="02a3d1cc8b177a9af4d870b0694008177ca23c375f2027e7f726e38c882f580e.png" title=" Then validate pay apply repayment" width="0"/>
+                <img src="e51d4c6bbe1403f741d833f8c2776de55af277799a6443836edb9851707b256f.png" title=" Then validate gl accounting id should be (true)" width="0"/>
+                <img src="e51d4c6bbe1403f741d833f8c2776de55af277799a6443836edb9851707b256f.png" title=" Then validate id transaction view should be (true)" width="0"/>
+                <img src="e51d4c6bbe1403f741d833f8c2776de55af277799a6443836edb9851707b256f.png" title=" Then validate id transaction view should be (true)" width="0"/>
+                <img src="e51d4c6bbe1403f741d833f8c2776de55af277799a6443836edb9851707b256f.png" title=" Then validate pay apply repayment (completed)" width="0"/>
+
+                <img src="e51d4c6bbe1403f741d833f8c2776de55af277799a6443836edb9851707b256f.png" title=" 1: Test new pay apply repayment JM uat ({country=Jamaica, row=10}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.1</span>
+</div>
+</body>
+</html>
