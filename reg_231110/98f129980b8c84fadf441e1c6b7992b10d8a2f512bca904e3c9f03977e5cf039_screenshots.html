@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="b7eb914e90ad1d1bf203303943345bb8f3de36adc1a01ea550b17a35a4e3d2ee.html">Regression Cashloan New Client</a></span>
+                > <span class="truncate-60"><a
+                    href="98f129980b8c84fadf441e1c6b7992b10d8a2f512bca904e3c9f03977e5cf039.html">3. Approve new client request </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 10-11-2023 10:56</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Regression Cashloan New Client</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="1d0c02fb9cb969bbd9e2f900ec6333e01b070c6fb5e26345e9374169cfab9e68.html">Regression
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="12a5f26f6dc9e88364f10fe69544d54c5d2f49827d2373dccb5ad69739f7d1b4.html">Request Tracking
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="3ce388ea8511800032930896a3e5ba2c4f80e46f1a10b143b67009baf212c6a0.html">2 To 5 Minutes
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Approve new client request
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given User navigate into Workflow "&lt;country&gt;" with the credentials<br>And Select the country<br>Then Select "&lt;menu&gt;" menu in Workflow<br>When Approved client request with document "&lt;trn&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="790afa1b7a47f724924655fd995dabdc49ce01e4b441bbd81964c26f9be04abb.png" title=" 1: 3. Approve new client request ({country=Jamaica, trn=989800148, menu=Request Tracking})" width="0"/>
+                <img src="790afa1b7a47f724924655fd995dabdc49ce01e4b441bbd81964c26f9be04abb.png" title=" Given User navigate into Workflow &quot;Jamaica&quot; with the credentials" width="0"/>
+                <img src="790afa1b7a47f724924655fd995dabdc49ce01e4b441bbd81964c26f9be04abb.png" title=" Admin navigate" width="0"/>
+                <img src="790afa1b7a47f724924655fd995dabdc49ce01e4b441bbd81964c26f9be04abb.png" title=" admin opens the browser at https://workflow-uat.unicomer.com/&Acirc;&nbsp;" width="0"/>
+                <img src="272aeba6cd2e04af3451d8bef9cf5afe054ffbe9c8b1e0b3fe28fd6614fb2eca.png" title=" admin opens the browser at https://workflow-uat.unicomer.com/&Acirc;&nbsp; (completed)" width="0"/>
+                <img src="019297f2d3a098e26af54e06e95ccfd01ba6c2adfe83715d0ffbef77afc4b238.png" title=" admin enters 'credit.analyst@unicomer.com' into ENTER THE USERNAME" width="0"/>
+                <img src="39c93e677e0954721bc3e0d5aa724778fb97ca441ad1205d203cada242211ed5.png" title=" admin enters 'credit.analyst@unicomer.com' into ENTER THE USERNAME (completed)" width="0"/>
+                <img src="39c93e677e0954721bc3e0d5aa724778fb97ca441ad1205d203cada242211ed5.png" title=" admin enters 'OyjzMF10TOX3' into ENTER THE PASSWORD" width="0"/>
+                <img src="5b41a7a6154f4385aab5b7c921553202ae7ed329ccabf1d18d66c5479a2c05c1.png" title=" admin enters 'OyjzMF10TOX3' into ENTER THE PASSWORD (completed)" width="0"/>
+                <img src="5b41a7a6154f4385aab5b7c921553202ae7ed329ccabf1d18d66c5479a2c05c1.png" title=" admin clicks on SUBMIT CREDENTIALS" width="0"/>
+                <img src="272aeba6cd2e04af3451d8bef9cf5afe054ffbe9c8b1e0b3fe28fd6614fb2eca.png" title=" admin clicks on SUBMIT CREDENTIALS (completed)" width="0"/>
+                <img src="b6c2aba5f19827fedb9b5e71d971ad88eb5b964e8dd318cbbc7f76a8a1f3c773.png" title=" Admin navigate (completed)" width="0"/>
+                <img src="b6c2aba5f19827fedb9b5e71d971ad88eb5b964e8dd318cbbc7f76a8a1f3c773.png" title=" Given User navigate into Workflow &quot;Jamaica&quot; with the credentials (completed)" width="0"/>
+                <img src="b6c2aba5f19827fedb9b5e71d971ad88eb5b964e8dd318cbbc7f76a8a1f3c773.png" title=" And Select the country" width="0"/>
+                <img src="b6c2aba5f19827fedb9b5e71d971ad88eb5b964e8dd318cbbc7f76a8a1f3c773.png" title=" Admin select country" width="0"/>
+                <img src="b6c2aba5f19827fedb9b5e71d971ad88eb5b964e8dd318cbbc7f76a8a1f3c773.png" title=" admin clicks on List Language" width="0"/>
+                <img src="1bc97ca27d4e1a395d540937f4d9dbca6e43b5cb9efafcc180413070395aa547.png" title=" admin clicks on List Language (completed)" width="0"/>
+                <img src="c8bab9ab0310efec025314dd686583631d1279155fb74643523f8ee3f46c86ec.png" title=" Admin select country (completed)" width="0"/>
+                <img src="c8bab9ab0310efec025314dd686583631d1279155fb74643523f8ee3f46c86ec.png" title=" And Select the country (completed)" width="0"/>
+                <img src="c8bab9ab0310efec025314dd686583631d1279155fb74643523f8ee3f46c86ec.png" title=" Then Select &quot;Request Tracking&quot; menu in Workflow" width="0"/>
+                <img src="c8bab9ab0310efec025314dd686583631d1279155fb74643523f8ee3f46c86ec.png" title=" Admin select menu" width="0"/>
+                <img src="c8bab9ab0310efec025314dd686583631d1279155fb74643523f8ee3f46c86ec.png" title=" admin clicks on Select Menu" width="0"/>
+                <img src="a122e8d738d090e451c01f7ce0de58bba49d9f02c2401f33b16cab306fa87766.png" title=" admin clicks on Select Menu (completed)" width="0"/>
+                <img src="35467102d4938e290594b443588022854f4d3f822206ef316a87a91f3e88fc87.png" title=" Admin select menu (completed)" width="0"/>
+                <img src="b4d6a62762df54db114d71f1cd6a6f8ba7e40840901766787307ec8e2703d3fb.png" title=" Then Select &quot;Request Tracking&quot; menu in Workflow (completed)" width="0"/>
+                <img src="066031f0f6664ebb27830d822803e2315caf8fdad9e9ad2951753149f6df4c80.png" title=" When Approved client request with document &quot;989800148&quot;" width="0"/>
+                <img src="fc34364253efb7f261749101a1c7d94ee1f266d982a711fee30e6746671e2d9d.png" title=" Admin search client request trn" width="0"/>
+                <img src="293eba52bad2a57295836f2d128f295eae4255eac29b9e2cd7b10d9522b84ec2.png" title=" admin enters '989800148' into Input TRN" width="0"/>
+                <img src="b4c622fef355ddf5cffa55acc98242cc807e002caa062fa96d26e318189a6cf8.png" title=" admin enters '989800148' into Input TRN (completed)" width="0"/>
+                <img src="b4c622fef355ddf5cffa55acc98242cc807e002caa062fa96d26e318189a6cf8.png" title=" admin clicks on Button Search TRN" width="0"/>
+                <img src="4504473eb38fa3b74b4d2a8911e0cc2bea2ee2f76c68eb923b676cd5903cf37d.png" title=" admin clicks on Button Search TRN (completed)" width="0"/>
+                <img src="bd8926debb32eadf0a94149768e9ae5b74519596b10982e654337f0340ea9cf9.png" title=" admin clicks on Button Click Request" width="0"/>
+                <img src="e114f6c2340f08ffb5b6c0283d9388e6ac3c33d34ac8910ae51a20230a94e479.png" title=" admin clicks on Button Click Request (completed)" width="0"/>
+                <img src="1cac9c9cece383a8ef7404714afadc30de50bc8f3c20a7dfdba70adb08c14001.png" title=" Admin search client request trn (completed)" width="0"/>
+                <img src="63d6ee1d06c8261a5842958a74303d3051f4dc4ea198ba7a5b380ef3943de1b2.png" title=" Admin data validation client" width="0"/>
+                <img src="daa2fe1c0bf3f5935a65c82e9c41d97174b78daa7be0b36e17224ed5e94649f6.png" title=" admin clicks on Button Save Data" width="0"/>
+                <img src="b11fa4f2037afdc4dbe0eb5768729b205f9772150003ac683a4e02f242f2d0ec.png" title=" admin clicks on Button Save Data (completed)" width="0"/>
+                <img src="ba52f647f6e82bb75798600d4e6e5c4ff4910ff446bbc61a015a06c12d8f7258.png" title=" admin clicks on List General Info" width="0"/>
+                <img src="b0dad310bd452cd9f7e3e238b64c68d16b6925fb6e403c20484789e3f6bc552d.png" title=" admin clicks on List General Info (completed)" width="0"/>
+                <img src="43ba2590ea56feb9e83b27349115d37d529bd73bbce4a7e7e7bb25ab98be1360.png" title=" admin clicks on Button Save Data" width="0"/>
+                <img src="23e9183c740a5c9f49ea8f06c3a202bffd3e317662b6d98ddb2de75d8aad19a7.png" title=" admin clicks on Button Save Data (completed)" width="0"/>
+                <img src="039905a63928febcdf8005d26b0aa83f00597fb2646122aec9cb30a403591a3d.png" title=" admin clicks on List General Info" width="0"/>
+                <img src="281a524c7ac9a09fac9704dcc7e088ffa66cd0e95c0cd0886062f6a1986d97c2.png" title=" admin clicks on List General Info (completed)" width="0"/>
+                <img src="f5bc66f50e4fc2e4e3a4e3237a7462edd66dcf95f86c24b017b132232c606ae6.png" title=" admin clicks on Button Save Data" width="0"/>
+                <img src="5f34290c6587d3a72a1c7ce4b1c29a239ebec4179be05f72ac878bc8371e711f.png" title=" admin clicks on Button Save Data (completed)" width="0"/>
+                <img src="03ffcbaf0fda60dbf8dd28301ea1490ad89839ac500cbdb218fbd96414782f35.png" title=" admin clicks on List General Info" width="0"/>
+                <img src="f3d7a97e21b8d264b95956575cf06612ea037e072e9e024b9fe35a2e96243289.png" title=" admin clicks on List General Info (completed)" width="0"/>
+                <img src="e243482e3b76feec2382ed24fba0d8e32f020d616a10bb26430186cac442c27c.png" title=" admin clicks on Button Save Data" width="0"/>
+                <img src="3ac5e17c613d57000fc73ce77800dff113b1edb73a420d193f55d95196097f51.png" title=" admin clicks on Button Save Data (completed)" width="0"/>
+                <img src="9a3b8bea4375bdab0a509a274b133cbbc6d5f7588b79ff203cc6e85cfd3b1800.png" title=" admin clicks on List General Info" width="0"/>
+                <img src="5a4883fdd5cdc6e88cfab6b9a805d4672c3f58af40f87ce2abc2c0d4d00f5b12.png" title=" admin clicks on List General Info (completed)" width="0"/>
+                <img src="23fa0e395b010a25cf57d9757fcfe6d2d49b15e2cbfa30b9db0e6d4018b64864.png" title=" admin clicks on Button Save Data" width="0"/>
+                <img src="6ac8a2662f90e174626420220325ddb80ba3d6b2d2347ab238787235743b41e7.png" title=" admin clicks on Button Save Data (completed)" width="0"/>
+                <img src="d35b480188e4a3c4800b3f778f0d90d09dc5be6479246323f68235ff38f024fb.png" title=" admin clicks on List General Info" width="0"/>
+                <img src="96fd6ce16bf2492b8b149fe7d42250a5ea80e254a3d21fba1443fee17fa83356.png" title=" admin clicks on List General Info (completed)" width="0"/>
+                <img src="b4b2d21b4fc2a6b7b139ee76eedc7b59a4e02df7f9b9c4ab4a0470aa6958988e.png" title=" admin clicks on Button Save Data" width="0"/>
+                <img src="4431bde6fb3298c9517f55f24b7655e7e5cd1bf13709491d0477b4f484235e4f.png" title=" admin clicks on Button Save Data (completed)" width="0"/>
+                <img src="6bb1b2b5217a7c593f70571f5f0e5fb8d492a7bab6621999017a01751141c3df.png" title=" Admin data validation client (completed)" width="0"/>
+                <img src="6bb1b2b5217a7c593f70571f5f0e5fb8d492a7bab6621999017a01751141c3df.png" title=" Admin confirm validation client" width="0"/>
+                <img src="50a03e43fc7b02c4e66c90c82903054c6c14dadfb7ee265e95c9406d01073f7d.png" title=" admin clicks on List General Info" width="0"/>
+                <img src="aebca8763de10cdd1a17fea43d9c37a406452d638c0b77b7bad039fef363d815.png" title=" admin clicks on List General Info (completed)" width="0"/>
+                <img src="28f3b4854a6b441fa30721846dc50bf8909142e7089d09ab6b46a6a5f1d5034e.png" title=" admin clicks on Button Click Status" width="0"/>
+                <img src="9d029d38354a2544718d2f52080dade8ab034107962e4740ad7ef480a935ad5f.png" title=" admin clicks on Button Click Status (completed)" width="0"/>
+                <img src="9d029d38354a2544718d2f52080dade8ab034107962e4740ad7ef480a935ad5f.png" title=" admin clicks on Button Data Verification" width="0"/>
+                <img src="fa4dc6c31ac9a938c81dec8567944a6c5a5b3bdae1a30fc6913d91d3e3ca7c53.png" title=" admin clicks on Button Data Verification (completed)" width="0"/>
+                <img src="fa4dc6c31ac9a938c81dec8567944a6c5a5b3bdae1a30fc6913d91d3e3ca7c53.png" title=" admin clicks on Button sub status" width="0"/>
+                <img src="7d28fc228d099d34c8b9313a39ebf9fcf7b432be5f29579ccb83009ed96c0406.png" title=" admin clicks on Button sub status (completed)" width="0"/>
+                <img src="7d28fc228d099d34c8b9313a39ebf9fcf7b432be5f29579ccb83009ed96c0406.png" title=" admin clicks on Button Data Validation" width="0"/>
+                <img src="728e6f9cffafbcfc70d5b4dffcffdaea77272a35afdd4d892b2d5b0c2e68a12a.png" title=" admin clicks on Button Data Validation (completed)" width="0"/>
+                <img src="728e6f9cffafbcfc70d5b4dffcffdaea77272a35afdd4d892b2d5b0c2e68a12a.png" title=" admin clicks on Button Save Change" width="0"/>
+                <img src="756d9bf790472a58dd0a8ea5f49960d08bb7649c9b19db8b3e3cd006ccdf6245.png" title=" admin clicks on Button Save Change (completed)" width="0"/>
+                <img src="cf6c33cfe95949cd960aebc788620f77fde9ec445aa8f7277bd0d6d50be57881.png" title=" admin clicks on Button Click Status" width="0"/>
+                <img src="f6c8c68391711e4593528c2e8a5f815cf7d5dce131ecac756686e5ae51381813.png" title=" admin clicks on Button Click Status (completed)" width="0"/>
+                <img src="1fbd2cfc3bc2b0f365c6edc641b5c4807f78bfaace7f8774d7845a34041bf3d3.png" title=" admin clicks on Button Select Approved" width="0"/>
+                <img src="1c8c1a2825d003771a2c12a420daab161db7964f18da44c622cdf3bac09f47ee.png" title=" admin clicks on Button Select Approved (completed)" width="0"/>
+                <img src="511e01a1043f40bccc674806a026a68f47b3c224e959c53b8058a87c39a32973.png" title=" admin clicks on Button Save Change" width="0"/>
+                <img src="e2ed82b3fa8f4c9936abc4cd760d7451316b8422b05ad2deb0770c9eae3dbe14.png" title=" admin clicks on Button Save Change (completed)" width="0"/>
+                <img src="2b4f75707452dec526e2731b706fd89c60d037021f3f7de3490d6c01d51c19b8.png" title=" Admin confirm validation client (completed)" width="0"/>
+                <img src="2b4f75707452dec526e2731b706fd89c60d037021f3f7de3490d6c01d51c19b8.png" title=" When Approved client request with document &quot;989800148&quot; (completed)" width="0"/>
+
+                <img src="1d3fc7abf0e010e6d2e70e146e4310b08e075c42c42b75c86ec597a6edbc156f.png" title=" 1: 3. Approve new client request ({country=Jamaica, trn=989800148, menu=Request Tracking}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.1</span>
+</div>
+</body>
+</html>
