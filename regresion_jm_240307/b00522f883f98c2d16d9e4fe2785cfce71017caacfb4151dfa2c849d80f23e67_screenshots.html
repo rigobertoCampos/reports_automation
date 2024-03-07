@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="a9bb6d3e13eb01f4bd0eb4f3ac5e8124d9df7a168cb80eed0623becbbd370022.html">Regression JM</a></span>
+                > <span class="truncate-60"><a
+                    href="b00522f883f98c2d16d9e4fe2785cfce71017caacfb4151dfa2c849d80f23e67.html">1. New credit application Emma JM </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 07-03-2024 09:22</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Regression JM</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="1d0c02fb9cb969bbd9e2f900ec6333e01b070c6fb5e26345e9374169cfab9e68.html">Regression
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="9fc8907ee8e8fe2ec9d308139a08b78b9255fd4cf20338e32f26996c437e9a66.html">New Client Automatic
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="3ce388ea8511800032930896a3e5ba2c4f80e46f1a10b143b67009baf212c6a0.html">2 To 5 Minutes
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">New credit application Emma JM
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given DataTable customer data<br><table class='embedded'><thead><th>typeId</th><th>documentId</th><th>store</th><th>firstName</th><th>secondName</th><th>firstLastName</th><th>secondLastName</th><th>numberMovil</th><th>email</th><th>birthDate</th><th>areaCode</th><th>gender</th><th>dependsNumber</th><th>marriedStatus</th><th>address</th><th>frecuencyPaid</th><th>income</th><th>occupation</th><th>companyName</th><th>mployStartDate</th><th>companyParish</th><th>companyDistrict</th><th>jobMainActivity</th><th>department</th><th>district</th><th>streetResidence</th><th>referenceResidence</th><th>currentDateAddress</th><th>residentStatus</th><th>employStartDate</th><th>nameReference1</th><th>relationship1</th><th>areaCodeRef</th><th>numberReference1</th><th>referenceLocation</th><th>nameReference2</th><th>relationship2</th><th>numberReference2</th><th>streetWork</th></thead><tbody><tr><td>&lt;typeId&gt;</td><td>&lt;documentId&gt;</td><td>&lt;store&gt;</td><td>&lt;firstName&gt;</td><td>&lt;secondName&gt;</td><td>&lt;firstLastName&gt;</td><td>&lt;secondLastName&gt;</td><td>&lt;numberMovil&gt;</td><td>&lt;email&gt;</td><td>&lt;birthDate&gt;</td><td>&lt;areaCode&gt;</td><td>&lt;gender&gt;</td><td>&lt;dependsNumber&gt;</td><td>&lt;marriedStatus&gt;</td><td>&lt;address&gt;</td><td>&lt;frecuencyPaid&gt;</td><td>&lt;income&gt;</td><td>&lt;occupation&gt;</td><td>&lt;companyName&gt;</td><td>&lt;employStartDate&gt;</td><td>&lt;companyParish&gt;</td><td>&lt;companyDistrict&gt;</td><td>&lt;jobMainActivity&gt;</td><td>&lt;department&gt;</td><td>&lt;district&gt;</td><td>&lt;streetResidence&gt;</td><td>&lt;referenceResidence&gt;</td><td>&lt;currentDateAddress&gt;</td><td>&lt;residentStatus&gt;</td><td>&lt;employStartDate&gt;</td><td>&lt;nameReference1&gt;</td><td>&lt;relationship1&gt;</td><td>&lt;areaCodeRef&gt;</td><td>&lt;numberReference1&gt;</td><td>&lt;referenceLocation&gt;</td><td>&lt;nameReference2&gt;</td><td>&lt;relationship2&gt;</td><td>&lt;numberReference2&gt;</td><td>&lt;streetWork&gt;</td></tr></tbody></table><br>Given the user into EMMA in "&lt;country&gt;" with credentials<br>And select the country emma<br>And select the store in emma<br>When validate the document ID dose not exist<br>And user enter basic information for Document validation section<br>Then validate the "&lt;message&gt;" that was created</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="53fc4626afb73a488c4ecc4bd78ab8bccc6a7fded04d89ed45921313168a1547.png" title=" 1: 1. New credit application Emma JM ({country=Jamaica, store=COU JM Port Maria, typeId=TRN, documentId=828888807, firstName=Julian, secondName=Saul, firstLastName=Salas, secondLastName=Calderon, gender=Male, birthDate=1983-JAN-1, areaCode=658, numberMovil=1598754, email=r@g.c, marriedStatus=Married, dependsNumber=1, address=This is the address 10, frecuencyPaid=Monthly, income=750000, occupation=Teacher, companyName=UNICOMER SAC, employStartDate=2020-MAY-7, companyParish=Manchester, companyDistrict=Christiana, jobMainActivity=Salary, department=St Mary, district=Annotto Bay, streetResidence=X5X9+QQQ, VEGAS, referenceResidence=79 -81a Road KINGSTON, currentDateAddress=2021-JAN-1, residentStatus=Owner, nameReference1=HERNAN PAREDES, relationship1=Coworker, areaCodeRef=876, numberReference1=1593645, referenceLocation=79 -81a Road KINGSTON, nameReference2=JULIAN ALVAREZ, relationship2=Father, numberReference2=3697415, streetWork=PRINCIPAL STREET, message=Credit application completed!})" width="0"/>
+                <img src="53fc4626afb73a488c4ecc4bd78ab8bccc6a7fded04d89ed45921313168a1547.png" title=" Given DataTable customer data
+| typeId | documentId | store | firstName | secondName | firstLastName | secondLastName | numberMovil | email | birthDate | areaCode | gender | dependsNumber | marriedStatus | address | frecuencyPaid | income | occupation | companyName | mployStartDate | companyParish | companyDistrict | jobMainActivity | department | district | streetResidence | referenceResidence | currentDateAddress | residentStatus | employStartDate | nameReference1 | relationship1 | areaCodeRef | numberReference1 | referenceLocation | nameReference2 | relationship2 | numberReference2 | streetWork |
+| TRN | 828888807 | COU JM Port Maria | Julian | Saul | Salas | Calderon | 1598754 | r@g.c | 1983-JAN-1 | 658 | Male | 1 | Married | This is the address 10 | Monthly | 750000 | Teacher | UNICOMER SAC | 2001-JAN-1 | Manchester | Christiana | Salary | St Mary | Annotto Bay | X5X9+QQQ, VEGAS | 79 -81a Road KINGSTON | 2021-JAN-1 | Owner | 2001-JAN-1 | HERNAN PAREDES | Coworker | 876 | 1593645 | 79 -81a Road KINGSTON | JULIAN ALVAREZ | Father | 3697415 | PRINCIPAL STREET |" width="0"/>
+                <img src="53fc4626afb73a488c4ecc4bd78ab8bccc6a7fded04d89ed45921313168a1547.png" title=" Given the user into EMMA in &quot;Jamaica&quot; with credentials" width="0"/>
+                <img src="53fc4626afb73a488c4ecc4bd78ab8bccc6a7fded04d89ed45921313168a1547.png" title=" Admin navigate sit" width="0"/>
+                <img src="53fc4626afb73a488c4ecc4bd78ab8bccc6a7fded04d89ed45921313168a1547.png" title=" admin opens the browser at https://credits-uat.unicomer.com/" width="0"/>
+                <img src="973b1e86dfedde5ee8fbcf1386c07303db6b58d570eab57034859375e04cd580.png" title=" admin opens the browser at https://credits-uat.unicomer.com/ (completed)" width="0"/>
+                <img src="973b1e86dfedde5ee8fbcf1386c07303db6b58d570eab57034859375e04cd580.png" title=" admin clicks on BUTTON LOGIN" width="0"/>
+                <img src="4d46318ee7280677bcd710ac3782fe8ba941b0a264838ac764a907246092bd3f.png" title=" admin clicks on BUTTON LOGIN (completed)" width="0"/>
+                <img src="4d46318ee7280677bcd710ac3782fe8ba941b0a264838ac764a907246092bd3f.png" title=" admin enters 'ventas_evaluacioncreditojm@unicomer.com' into ENTER THE USER" width="0"/>
+                <img src="859703ba604ff98f4a11a96727db28501f6753c3e5a86f47a8d8a9771c26cfa9.png" title=" admin enters 'ventas_evaluacioncreditojm@unicomer.com' into ENTER THE USER (completed)" width="0"/>
+                <img src="35ae70253c218e860830e320286c5ae3eaafefa77179ee5c16a1c0bf850e6d81.png" title=" admin clicks on BUTTON SUBMIT" width="0"/>
+                <img src="00d7fde35b562cce401c7c8ff3547671fe52c31268790d971dd2435b2d136273.png" title=" admin clicks on BUTTON SUBMIT (completed)" width="0"/>
+                <img src="00d7fde35b562cce401c7c8ff3547671fe52c31268790d971dd2435b2d136273.png" title=" admin enters 'Unicomer23' into ENTER THE PASSWORD" width="0"/>
+                <img src="30011e503b4e04f140a23f004a68e756d5b9f5a38012d0c159fad951fdab5272.png" title=" admin enters 'Unicomer23' into ENTER THE PASSWORD (completed)" width="0"/>
+                <img src="30011e503b4e04f140a23f004a68e756d5b9f5a38012d0c159fad951fdab5272.png" title=" admin clicks on BUTTON SUBMIT" width="0"/>
+                <img src="815099b72527b73ae97e00e2909f6cf2fb3795a9d3d2e174e527a917aefc0f2a.png" title=" admin clicks on BUTTON SUBMIT (completed)" width="0"/>
+                <img src="ec7b799e089a5f9204f2791d8ea217efa63514ff6df1f9e390436cb912e694cd.png" title=" admin clicks on BUTTON NOT ACTIVE" width="0"/>
+                <img src="53fc4626afb73a488c4ecc4bd78ab8bccc6a7fded04d89ed45921313168a1547.png" title=" admin clicks on BUTTON NOT ACTIVE (completed)" width="0"/>
+                <img src="c49583e12fd3bc33ca037b8a1580ceeba734338cb7594b1b408ce828944e082c.png" title=" Admin navigate sit (completed)" width="0"/>
+                <img src="c49583e12fd3bc33ca037b8a1580ceeba734338cb7594b1b408ce828944e082c.png" title=" Given the user into EMMA in &quot;Jamaica&quot; with credentials (completed)" width="0"/>
+                <img src="c49583e12fd3bc33ca037b8a1580ceeba734338cb7594b1b408ce828944e082c.png" title=" And select the country emma" width="0"/>
+                <img src="c49583e12fd3bc33ca037b8a1580ceeba734338cb7594b1b408ce828944e082c.png" title=" Admin select country" width="0"/>
+                <img src="c49583e12fd3bc33ca037b8a1580ceeba734338cb7594b1b408ce828944e082c.png" title=" admin clicks on ALERT COUNTRY" width="0"/>
+                <img src="656b6ed60a926eb7dd633b84b5fce2401c2ae9b9eaf850207b6633d43756c64e.png" title=" admin clicks on ALERT COUNTRY (completed)" width="0"/>
+                <img src="656b6ed60a926eb7dd633b84b5fce2401c2ae9b9eaf850207b6633d43756c64e.png" title=" admin clicks on Select option from list of elements" width="0"/>
+                <img src="72a75750065211238ba9b8b38404d1b7695e9f318f5c569c6dffaf0b955f148b.png" title=" admin clicks on Select option from list of elements (completed)" width="0"/>
+                <img src="82e5223664cf5f4eba0ca67c24a58df16f9850343d0d4ce62747c47e8845947d.png" title=" Admin select country (completed)" width="0"/>
+                <img src="82e5223664cf5f4eba0ca67c24a58df16f9850343d0d4ce62747c47e8845947d.png" title=" And select the country emma (completed)" width="0"/>
+                <img src="82e5223664cf5f4eba0ca67c24a58df16f9850343d0d4ce62747c47e8845947d.png" title=" And select the store in emma" width="0"/>
+                <img src="82e5223664cf5f4eba0ca67c24a58df16f9850343d0d4ce62747c47e8845947d.png" title=" Admin select store" width="0"/>
+                <img src="82e5223664cf5f4eba0ca67c24a58df16f9850343d0d4ce62747c47e8845947d.png" title=" admin clicks on ALERT STORE" width="0"/>
+                <img src="374e36f23ff72c32da0ff5b5a2f66c2d5891ff4f9589441bcfa8dc6e73b4c3d4.png" title=" admin clicks on ALERT STORE (completed)" width="0"/>
+                <img src="374e36f23ff72c32da0ff5b5a2f66c2d5891ff4f9589441bcfa8dc6e73b4c3d4.png" title=" admin clicks on Select option from list of elements" width="0"/>
+                <img src="6d655e3fdb483279b6eb54e2bd086e65c03d2960ecc25e2385c7f16b0c0d6024.png" title=" admin clicks on Select option from list of elements (completed)" width="0"/>
+                <img src="1428d8c405a2f70d05ce49e7e0674352d1bb4e4d154ce26b000cc630c0900686.png" title=" admin clicks on BUTTON CONTINUE JM" width="0"/>
+                <img src="938c0b4cc380110e01344e7d7f3cebefcf75cb939a943f8de15fc859f84573c6.png" title=" admin clicks on BUTTON CONTINUE JM (completed)" width="0"/>
+                <img src="7e30211c69c63cd8cb0ba8688927452cc4b87e2f89bd46a073facf47dcc6ca3e.png" title=" Admin select store (completed)" width="0"/>
+                <img src="7e30211c69c63cd8cb0ba8688927452cc4b87e2f89bd46a073facf47dcc6ca3e.png" title=" And select the store in emma (completed)" width="0"/>
+                <img src="7e30211c69c63cd8cb0ba8688927452cc4b87e2f89bd46a073facf47dcc6ca3e.png" title=" When validate the document ID dose not exist" width="0"/>
+                <img src="7e30211c69c63cd8cb0ba8688927452cc4b87e2f89bd46a073facf47dcc6ca3e.png" title=" Admin search document" width="0"/>
+                <img src="7e30211c69c63cd8cb0ba8688927452cc4b87e2f89bd46a073facf47dcc6ca3e.png" title=" admin enters '828888807' into INSERT DOCUMENT" width="0"/>
+                <img src="0d2c5c892ee8fc4b9abc111d26d097b3296a335e1e1a1c9e1d472660ee5bb3d9.png" title=" admin enters '828888807' into INSERT DOCUMENT (completed)" width="0"/>
+                <img src="0d2c5c892ee8fc4b9abc111d26d097b3296a335e1e1a1c9e1d472660ee5bb3d9.png" title=" admin clicks on BUTTON TO CHECK IF CLIENT ALREADY EXIST" width="0"/>
+                <img src="2e027ae889624432cbcb27349fad2b9692149c470e5c9de9980289353537479f.png" title=" admin clicks on BUTTON TO CHECK IF CLIENT ALREADY EXIST (completed)" width="0"/>
+                <img src="d4d3b525535337418ebd0eb353187bb09bae99ac6d4eb5c176e70dce4890cfa4.png" title=" admin clicks on BUTTON NEW CREDIT APPLICATION" width="0"/>
+                <img src="d4116ae601893371922daf19d1e1d3e798f43d683f305ca127e716b8aab49fa9.png" title=" admin clicks on BUTTON NEW CREDIT APPLICATION (completed)" width="0"/>
+                <img src="d4116ae601893371922daf19d1e1d3e798f43d683f305ca127e716b8aab49fa9.png" title=" Admin search document (completed)" width="0"/>
+                <img src="5b1d566ad2031b7fafeac35014d6d351656ba77775f42b6dc20ea16316a83dc3.png" title=" When validate the document ID dose not exist (completed)" width="0"/>
+                <img src="5b1d566ad2031b7fafeac35014d6d351656ba77775f42b6dc20ea16316a83dc3.png" title=" And user enter basic information for Document validation section" width="0"/>
+                <img src="b4b1e69992589f4b7d3426ca7a4eb6960e744b35deb553c4263474fe26ea8f7d.png" title=" Admin document validation" width="0"/>
+                <img src="c78a7782355bcecd8fc625e2100e96b52a3a8c26311a3181441ce937e6b17201.png" title=" Admin write into" width="0"/>
+                <img src="9429db22e1e839e9dc6faf82584465a90f525eef85ab9da1ed5586767f42d6c4.png" title=" admin enters 'Julian' into INPUT NAME" width="0"/>
+                <img src="fc6b7c767d9b8c2f20e5a22ca7149712cbc802891fc6dc6c5521992bd1c62e2a.png" title=" admin enters 'Julian' into INPUT NAME (completed)" width="0"/>
+                <img src="5f834e6697dfd6a0fa39d23357d576aa8963e72ca7fc77418e8d660479cfc426.png" title=" Admin write into (completed)" width="0"/>
+                <img src="5f834e6697dfd6a0fa39d23357d576aa8963e72ca7fc77418e8d660479cfc426.png" title=" admin enters 'Saul' into INPUT SECOND NAME" width="0"/>
+                <img src="cd916771f6b0626e79b6af47f935f709dbbefaf6081661ae3937f7324217461b.png" title=" admin enters 'Saul' into INPUT SECOND NAME (completed)" width="0"/>
+                <img src="cd916771f6b0626e79b6af47f935f709dbbefaf6081661ae3937f7324217461b.png" title=" admin enters 'Salas' into INPUT THE LAST NAME" width="0"/>
+                <img src="59006fad5ec089d4585dac0e72568316dd65fdcd5262cab76c776ade6b45bf1a.png" title=" admin enters 'Salas' into INPUT THE LAST NAME (completed)" width="0"/>
+                <img src="59006fad5ec089d4585dac0e72568316dd65fdcd5262cab76c776ade6b45bf1a.png" title=" admin enters 'Calderon' into INPUT THE CLIENT SECOND LAST NAME" width="0"/>
+                <img src="df0d45a0376d68173693f4afe69016b6e8c532e3fcacc7d13a4cb382c7b50d69.png" title=" admin enters 'Calderon' into INPUT THE CLIENT SECOND LAST NAME (completed)" width="0"/>
+                <img src="4cdbd9104e87a688b630db4437aa0691d483b27b7cbee90208af78c9c7b90cc0.png" title=" admin clicks on DROPDOWN TO SELECT GENDER" width="0"/>
+                <img src="6df7026756a3403e1acb72d8cdbf78fb844f21a0ad910db4ba05ca92e8d1a285.png" title=" admin clicks on DROPDOWN TO SELECT GENDER (completed)" width="0"/>
+                <img src="eb6b327fe600db5a53ba722ec5551865e8bb00e38239c461d474620789d5b046.png" title=" admin clicks on BUTTON SELECT YEARS " width="0"/>
+                <img src="3f4f3a4217a3a5dd1b913601a2f384c8384c71d52ee67ea8cfcdb101666295f7.png" title=" admin clicks on BUTTON SELECT YEARS  (completed)" width="0"/>
+                <img src="3f4f3a4217a3a5dd1b913601a2f384c8384c71d52ee67ea8cfcdb101666295f7.png" title=" admin clicks on BUTTON BACK YEARS " width="0"/>
+                <img src="1edbe0f82c827afdb13e7093a590566b944c7d7f854e7e3791e359b6c82aa46f.png" title=" admin clicks on BUTTON BACK YEARS  (completed)" width="0"/>
+                <img src="5f0ba9d1bfa9e3f7e00eb0d62cc1f33c5d8c940cc9f33413df5fe2656232c31e.png" title=" admin clicks on DROPDOWN TO SELECT AREA CODE" width="0"/>
+                <img src="03c9e67e4172f3580825b3eeb5efcd9130556c82ea919a95404eafd2ba4537f3.png" title=" admin clicks on DROPDOWN TO SELECT AREA CODE (completed)" width="0"/>
+                <img src="596ae529c8e52693e9c56318397269117549a597d59136dd2bee1eb66ab600d0.png" title=" admin enters '1598754' into INPUT PHONE NUMBER IN EMMA UAT JM" width="0"/>
+                <img src="0c7bb136191b85bfcfe6af0682b61b4da3894a4791302c72591cdcf7bfcbed9b.png" title=" admin enters '1598754' into INPUT PHONE NUMBER IN EMMA UAT JM (completed)" width="0"/>
+                <img src="0c7bb136191b85bfcfe6af0682b61b4da3894a4791302c72591cdcf7bfcbed9b.png" title=" admin enters 'correo20240307092246@gmail.com' into INPUT EMAIL" width="0"/>
+                <img src="0beb10ff589ffa98c04f10ed31274df77853157ee32b05ce8d476f7e0968e3bd.png" title=" admin enters 'correo20240307092246@gmail.com' into INPUT EMAIL (completed)" width="0"/>
+                <img src="0beb10ff589ffa98c04f10ed31274df77853157ee32b05ce8d476f7e0968e3bd.png" title=" admin clicks on BUTTON TO SEND CLIENT TO EVALUATE" width="0"/>
+                <img src="ee9c40d8a6ab4ce6eb99b10fe4bcc50cae2120a29342fb2840d57d66e67b87f4.png" title=" admin clicks on BUTTON TO SEND CLIENT TO EVALUATE (completed)" width="0"/>
+                <img src="7c64a6c568cb2a4c56a5e23bb428bb0b635c95247a57aefd18e2e9562bdec31d.png" title=" admin clicks on BUTTON PREAPROVED OK" width="0"/>
+                <img src="c7786d9e70b026c8e3bf723e2c40cc2e89d721f69469bcd9f13cabbe3817ae4a.png" title=" admin clicks on BUTTON PREAPROVED OK (completed)" width="0"/>
+                <img src="c7786d9e70b026c8e3bf723e2c40cc2e89d721f69469bcd9f13cabbe3817ae4a.png" title=" Admin document validation (completed)" width="0"/>
+                <img src="c7786d9e70b026c8e3bf723e2c40cc2e89d721f69469bcd9f13cabbe3817ae4a.png" title=" Admin pre qualify personal info" width="0"/>
+                <img src="6eb715ad3324e584a492a63742cc5709d184cc9deec245e1d3d086a5c4b771b0.png" title=" admin clicks on DROPDOWN TO SELECT MARRIED STATUS FROM THE CUSTOMER" width="0"/>
+                <img src="c8f2394ab4fcc2826d4a90da50c8b554bbc494a83d863bd901df4cd0ac6e1123.png" title=" admin clicks on DROPDOWN TO SELECT MARRIED STATUS FROM THE CUSTOMER (completed)" width="0"/>
+                <img src="fe3e9e1aa0d45ae285bd0c5d3bf26129ee6dca02df88ab671a373a5f4ebd3fca.png" title=" admin clicks on DROPDOWN TO SELECT COUNTRY OF BIRTH" width="0"/>
+                <img src="23d628ae7a265a09310c259c6f000ea22fde9885b3bd6fa3c185bc56412da754.png" title=" admin clicks on DROPDOWN TO SELECT COUNTRY OF BIRTH (completed)" width="0"/>
+                <img src="b4e0f4f5505d47449a018e935df78fc4d00882966fda80f6b80eb051bc0994a5.png" title=" admin enters '1' into iNPUTS TO ENTER THE NUMBER OF DEPENDS FROM THE CUSTOMER" width="0"/>
+                <img src="9d03c3533ab987f4444c16cbe96a730266e970a73aee133b89e9237e59a9b4b7.png" title=" admin enters '1' into iNPUTS TO ENTER THE NUMBER OF DEPENDS FROM THE CUSTOMER (completed)" width="0"/>
+                <img src="9d03c3533ab987f4444c16cbe96a730266e970a73aee133b89e9237e59a9b4b7.png" title=" admin clicks on DROPDOWN TO SELECT THE PAYMENT FREQUENCY FROM THE CUSTOMER" width="0"/>
+                <img src="bcb46bbb636675194c3e54d996878dd0fe559ea98ab420a1a88f1c11952e81e0.png" title=" admin clicks on DROPDOWN TO SELECT THE PAYMENT FREQUENCY FROM THE CUSTOMER (completed)" width="0"/>
+                <img src="df50b326980ecc50b7502a09311c67b441cbfb388c6b2d86134fa291ded759e1.png" title=" admin enters '750000' into INPUT TO ENTER THE PAYMENT INCOMING EVERY MONTH" width="0"/>
+                <img src="11fe9de4a5ea655bd355a78485bb342462c791a1a03e2b75ebb5f8bb22b1546c.png" title=" admin enters '750000' into INPUT TO ENTER THE PAYMENT INCOMING EVERY MONTH (completed)" width="0"/>
+                <img src="11fe9de4a5ea655bd355a78485bb342462c791a1a03e2b75ebb5f8bb22b1546c.png" title=" admin clicks on BUTTON SAVE PERSONAL INFO" width="0"/>
+                <img src="56fb531617c8125e3c51a6eb19ccd33af4fc6a807b885c73b1175f0a52eccb3b.png" title=" admin clicks on BUTTON SAVE PERSONAL INFO (completed)" width="0"/>
+                <img src="56fb531617c8125e3c51a6eb19ccd33af4fc6a807b885c73b1175f0a52eccb3b.png" title=" admin clicks on Confirm the incoming amount" width="0"/>
+                <img src="31eb3e870d25c30159ee65d972edbffb68d97ddf1eb4f6fa056b8b83ceffd4ee.png" title=" admin clicks on Confirm the incoming amount (completed)" width="0"/>
+                <img src="31eb3e870d25c30159ee65d972edbffb68d97ddf1eb4f6fa056b8b83ceffd4ee.png" title=" Admin pre qualify personal info (completed)" width="0"/>
+                <img src="4806d34525c97133e6a8b84b20cb15f7799971773d5ba3d2ad0dff7b90039a78.png" title=" Admin pre qualify work info" width="0"/>
+                <img src="73f9b727956bfe3f8fa2a7d89f70b9094878e01f5b532dc812ac4b35a2ffc963.png" title=" admin clicks on INPUT FOR WORK MAIN ECONOMIC ACTIVITY" width="0"/>
+                <img src="56eaed83443a388b3540abc3980c520b28d8a404910288b3d9952015771a9c2d.png" title=" admin clicks on INPUT FOR WORK MAIN ECONOMIC ACTIVITY (completed)" width="0"/>
+                <img src="f4b5b08211e10699d62279d57b5d53158db049a81e8fa9e0acf3964681e21358.png" title=" admin clicks on DROPDOWN TO SELECT THE MAIN OCCUPATION" width="0"/>
+                <img src="cd5062d65351d6fe450939f785f99061033982ff6e5531acaae9883fe9865f07.png" title=" admin clicks on DROPDOWN TO SELECT THE MAIN OCCUPATION (completed)" width="0"/>
+                <img src="ac740f126609677b008d5bb439f70a8f92f8413bf11510333e47a82ac10a8957.png" title=" admin enters 'UNICOMER SAC' into INPUT FOR EMPLOYER NAME" width="0"/>
+                <img src="ae9e22b6e436036f613eb93e64b3e3d6bdf6804689a4f2f3c80404d903c4e5ce.png" title=" admin enters 'UNICOMER SAC' into INPUT FOR EMPLOYER NAME (completed)" width="0"/>
+                <img src="ae9e22b6e436036f613eb93e64b3e3d6bdf6804689a4f2f3c80404d903c4e5ce.png" title=" admin clicks on BUTTON EMPLOYMENT START DATE" width="0"/>
+                <img src="c99ed7939caf2db6fd06d87b35facbf89eae5e4cc6c3d5c70db8209e1e885c90.png" title=" admin clicks on BUTTON EMPLOYMENT START DATE (completed)" width="0"/>
+                <img src="c99ed7939caf2db6fd06d87b35facbf89eae5e4cc6c3d5c70db8209e1e885c90.png" title=" admin clicks on BUTTON BACK YEARS " width="0"/>
+                <img src="915cb916043ce333a72957d3f0c81bf1b6881972c2a127591205b5b0db87fc06.png" title=" admin clicks on BUTTON BACK YEARS  (completed)" width="0"/>
+                <img src="860b9ca9360440ecf703540ff7b2f94ee212d25997b588126efd6d2f3dd4787f.png" title=" admin clicks on DROPDOWN TO SELECT PARISH OF WORK" width="0"/>
+                <img src="202361a46accdb19475a3cc2459e9a676595a7f463127a82b34d1793d9bb5831.png" title=" admin clicks on DROPDOWN TO SELECT PARISH OF WORK (completed)" width="0"/>
+                <img src="2450863f6c1b7ac8bcf6e0d7679b95775fb8a458b1c064c0b6790f4545b411c1.png" title=" admin clicks on DROPDOWN TO SELECT DISTRICT OF WORK" width="0"/>
+                <img src="ee278ee64d2ec55344b3331e5690bd8c300575271bac04e80aee042edff9cd35.png" title=" admin clicks on DROPDOWN TO SELECT DISTRICT OF WORK (completed)" width="0"/>
+                <img src="859adaf242624bfb9f9fd3db84ebf131177625a2816f868d8e78a93475a9279e.png" title=" admin enters 'This is the address 10' into IMPUT FOR YOUR CURRENT WORK ADDRESS" width="0"/>
+                <img src="f9947f26887a199a6e9a9bf3185c558c460471261dcf2230127293b1a2e623f5.png" title=" admin enters 'This is the address 10' into IMPUT FOR YOUR CURRENT WORK ADDRESS (completed)" width="0"/>
+                <img src="f9947f26887a199a6e9a9bf3185c558c460471261dcf2230127293b1a2e623f5.png" title=" admin enters '79 -81a Road KINGSTON' into INPUT WORK REFERENCE" width="0"/>
+                <img src="3d0de6a7f19de7e7dde33ada5c0c998ba079e12c929244fe055334ab3170998c.png" title=" admin enters '79 -81a Road KINGSTON' into INPUT WORK REFERENCE (completed)" width="0"/>
+                <img src="3d0de6a7f19de7e7dde33ada5c0c998ba079e12c929244fe055334ab3170998c.png" title=" admin clicks on DROPDOWN TO SELECT AREA CODE" width="0"/>
+                <img src="692b2004aebc2f57291c3f304e6c5ad8f3675a678298c65dfea58556cfad0dcf.png" title=" admin clicks on DROPDOWN TO SELECT AREA CODE (completed)" width="0"/>
+                <img src="e2fdd467d12fdd55931003ce6954e0430e13e5fd61edd09028a6a17e85cdc3b5.png" title=" admin enters '1598754' into INPUT FOR MOBILE WORK NUMBER" width="0"/>
+                <img src="9b4c4efa7d43eafd53952748598879082878d90123f6e5152ad701aa32ad9c33.png" title=" admin enters '1598754' into INPUT FOR MOBILE WORK NUMBER (completed)" width="0"/>
+                <img src="17b0b9d1b737806091cda464391362e68476702e0da4dc30b0171130d93ab728.png" title=" admin clicks on SAVE INFO WORK INFO" width="0"/>
+                <img src="8fc353b9838306c3c93bf94f0fec84d47b4db19f324595b439d4eaa8762719f1.png" title=" admin clicks on SAVE INFO WORK INFO (completed)" width="0"/>
+                <img src="8fc353b9838306c3c93bf94f0fec84d47b4db19f324595b439d4eaa8762719f1.png" title=" Admin pre qualify work info (completed)" width="0"/>
+                <img src="8fc353b9838306c3c93bf94f0fec84d47b4db19f324595b439d4eaa8762719f1.png" title=" Admin pre qualify location" width="0"/>
+                <img src="8fc353b9838306c3c93bf94f0fec84d47b4db19f324595b439d4eaa8762719f1.png" title=" admin clicks on DROPDOWN TO SELECT PARISH OF CUSTOMER" width="0"/>
+                <img src="d1a87b18c6f6d4173e2ad1bf177decf97d548607767da519e3b392acfbab8573.png" title=" admin clicks on DROPDOWN TO SELECT PARISH OF CUSTOMER (completed)" width="0"/>
+                <img src="98a4eab7ca017afd8d2d1f832be5065caf58458f08f0aef6f614592b911a86a0.png" title=" admin clicks on DROPDOWN TO SELECT DISTRICT OF CUSTOMER" width="0"/>
+                <img src="d051012323fb889fbb1aa3e31e901da69b228c6ab9002103989bed8e325bc18b.png" title=" admin clicks on DROPDOWN TO SELECT DISTRICT OF CUSTOMER (completed)" width="0"/>
+                <img src="7f83cb4f2c846c47f9104aa0c82395ea15c480ba722b796809a78e9d2dc5feae.png" title=" admin enters 'X5X9+QQQ, VEGAS' into INPUT RESIDENCE STREET" width="0"/>
+                <img src="f554b3c0bec03e8feeb5c6307222e36a65c9081c451b554931f79805e18f29d7.png" title=" admin enters 'X5X9+QQQ, VEGAS' into INPUT RESIDENCE STREET (completed)" width="0"/>
+                <img src="f554b3c0bec03e8feeb5c6307222e36a65c9081c451b554931f79805e18f29d7.png" title=" admin enters '79 -81a Road KINGSTON' into INPUT TO ENTER FIRST PERSONAL REFERENCE" width="0"/>
+                <img src="e4c0fc9baa99847e6ea02a5f637aacc4f4a27475bca165079189b2d141a904bb.png" title=" admin enters '79 -81a Road KINGSTON' into INPUT TO ENTER FIRST PERSONAL REFERENCE (completed)" width="0"/>
+                <img src="e4c0fc9baa99847e6ea02a5f637aacc4f4a27475bca165079189b2d141a904bb.png" title=" admin clicks on INPUT TO ENTER MONTHS AT CURRENT ADDRESS" width="0"/>
+                <img src="b21616c14da4527f85bd003dd75c1e15208aad6b1a08b56e5cc142578e7b0bb2.png" title=" admin clicks on INPUT TO ENTER MONTHS AT CURRENT ADDRESS (completed)" width="0"/>
+                <img src="4b5cd9a3568c9f6877aa68574f9b054803d500176ea85af21e11ac8d238457cb.png" title=" admin clicks on DROPDOWN TO SELECT RESIDENT STATUS OF CUSTOMER" width="0"/>
+                <img src="0712c174abf1aa5ab4320f8795fdbac621273d52b8dda484273d61a3751dc22d.png" title=" admin clicks on DROPDOWN TO SELECT RESIDENT STATUS OF CUSTOMER (completed)" width="0"/>
+                <img src="d4031bf3724381ebfa4e16b7ff869dd39d808c6fe1a98931103b1d81ec7e4c41.png" title=" admin clicks on CONFIRM SAVE LOCATION DATA" width="0"/>
+                <img src="c3aadd2f1cdb0b09efb16bc4c0067b8916b64a562d2b82eb0f648e33c0a89955.png" title=" admin clicks on CONFIRM SAVE LOCATION DATA (completed)" width="0"/>
+                <img src="c3aadd2f1cdb0b09efb16bc4c0067b8916b64a562d2b82eb0f648e33c0a89955.png" title=" Admin pre qualify location (completed)" width="0"/>
+                <img src="7254863860eeba7d9d2e815763ec516a245c27d0816f1caab2ff6abaccfd78ce.png" title=" Admin pre qualify references" width="0"/>
+                <img src="d0adeb3774470c82bc9c5053c2732cab2e6d538c4a65322ec161da68702b6e7c.png" title=" admin enters 'HERNAN PAREDES' into INPUT TO ENTER FIRST PERSONAL REFERENCE" width="0"/>
+                <img src="910256fccbb02753436d0c9dd3da68ba58b29ca997d6b0eb1db2bb999af1806e.png" title=" admin enters 'HERNAN PAREDES' into INPUT TO ENTER FIRST PERSONAL REFERENCE (completed)" width="0"/>
+                <img src="910256fccbb02753436d0c9dd3da68ba58b29ca997d6b0eb1db2bb999af1806e.png" title=" admin clicks on DROPDOWN TO SELECT RELATIONSHIP" width="0"/>
+                <img src="126c7f84f693f930ea15908b3512675c7eca25d7a18a89bb24a9362857bfb306.png" title=" admin clicks on DROPDOWN TO SELECT RELATIONSHIP (completed)" width="0"/>
+                <img src="62b22af7c7a8f8033477964489c04cc3c6b3aeb424a792d4845494320d650d11.png" title=" admin clicks on DROPDOWN TO SELECT RELATIONSHIP" width="0"/>
+                <img src="d9ce937cbec9413cfbb928b067c3f9445a56ce8d9af7e045553cee63e83b2cf1.png" title=" admin clicks on DROPDOWN TO SELECT RELATIONSHIP (completed)" width="0"/>
+                <img src="ed60e7bcf9b3faeb0fb7b6060de3ad695fd3139c7835a8fe11e1ff7156336139.png" title=" admin clicks on DROPDOWN TO SELECT AREA CODE" width="0"/>
+                <img src="c9cabd37f9d02cca834674c413aaec5ead185e8d0832c0b6ba7fc6b4bd0c5af3.png" title=" admin clicks on DROPDOWN TO SELECT AREA CODE (completed)" width="0"/>
+                <img src="20708ebe77afe2cfe11f3e4027cdc6160b05655a5db824fe3231237dcc3d3d3e.png" title=" admin enters '1593645' into INPUT TO ENTER FIRST PERSONAL REFERENCE NUMBER" width="0"/>
+                <img src="0151f681160421eb3e15c3873aab7f03f35faee5f6c4615de26fda33f88400c4.png" title=" admin enters '1593645' into INPUT TO ENTER FIRST PERSONAL REFERENCE NUMBER (completed)" width="0"/>
+                <img src="0151f681160421eb3e15c3873aab7f03f35faee5f6c4615de26fda33f88400c4.png" title=" admin enters 'JULIAN ALVAREZ' into INPUT TO ENTER SECOND PERSONAL REFERENCE" width="0"/>
+                <img src="cbf80290e24497aa9746f8af4e864425ee9e3148c256c9265be0c92132f1096d.png" title=" admin enters 'JULIAN ALVAREZ' into INPUT TO ENTER SECOND PERSONAL REFERENCE (completed)" width="0"/>
+                <img src="cbf80290e24497aa9746f8af4e864425ee9e3148c256c9265be0c92132f1096d.png" title=" admin clicks on DROPDOWN TO SELECT RELATIONSHIP SECOND REF" width="0"/>
+                <img src="5da15ff6883432a9b4c81eb0f5f3efdb72c734648140563490b99c7eb94a4e12.png" title=" admin clicks on DROPDOWN TO SELECT RELATIONSHIP SECOND REF (completed)" width="0"/>
+                <img src="2a7ed82d6315a0807dbb500bb8f51bc9e45e4392994437fd434b1223650c95e0.png" title=" admin clicks on DROPDOWN TO SELECT RELATIONSHIP SECOND REF" width="0"/>
+                <img src="c6326a2cc59ad3fba85126bef2f7a140a1ca565ffadad55012b52531187b3b48.png" title=" admin clicks on DROPDOWN TO SELECT RELATIONSHIP SECOND REF (completed)" width="0"/>
+                <img src="7b56400e5fb3e69c5d064f342c91267d07998de44832bdcf7f1d16d00a9e43df.png" title=" admin clicks on DROPDOWN TO SELECT AREA CODE" width="0"/>
+                <img src="f368cfadcf16037a503e740a11e17e8984a6f7b2bf77072dcc6fe7de50f8c229.png" title=" admin clicks on DROPDOWN TO SELECT AREA CODE (completed)" width="0"/>
+                <img src="387548a8b3ea90bad0d9ed40dd9c0477cbd6374214c5330c5b7391f53bb1793f.png" title=" admin enters '3697415' into INPUT TO ENTER FIRST PERSONAL REFERENCE NUMBER" width="0"/>
+                <img src="24f3e147ddda8399d19f68f3b322230f2c2f305d98c5a3c0d00a3cb6c11b020f.png" title=" admin enters '3697415' into INPUT TO ENTER FIRST PERSONAL REFERENCE NUMBER (completed)" width="0"/>
+                <img src="9d79cc0c39957b2f510c1f2bf44fc41afffd4d8539e0fa69580b4925674337f7.png" title=" admin clicks on CONFIRM FORM AND GO TO THE NEXT STEPS" width="0"/>
+                <img src="3ea3aac63654f07fbf9c3d8ddbcbd35219276fac05acdc00df084aa0d922f69c.png" title=" admin clicks on CONFIRM FORM AND GO TO THE NEXT STEPS (completed)" width="0"/>
+                <img src="3ea3aac63654f07fbf9c3d8ddbcbd35219276fac05acdc00df084aa0d922f69c.png" title=" Admin pre qualify references (completed)" width="0"/>
+                <img src="3ea3aac63654f07fbf9c3d8ddbcbd35219276fac05acdc00df084aa0d922f69c.png" title=" Admin pre qualify upload documents" width="0"/>
+                <img src="a0f3af9b832a63607295549ec56140bce2d9c61bc421af79f13a8f7a877e4c46.png" title=" admin clicks on ICON BOX TO UPLOAD DOCUMENTS" width="0"/>
+                <img src="204bdac1b38a2c5e7fd907ffc18da338b5abfee781af51ce3d240dc4fd30e1eb.png" title=" admin clicks on ICON BOX TO UPLOAD DOCUMENTS (completed)" width="0"/>
+                <img src="350df359bff04a128ffdf81bc802c4b435ae15d55d26943508eab9a1ead5b37c.png" title=" admin enters 'C:\Unicomer\ecosystem-regression/src/test/resources/files/dni.PNG' into INPUT DOCUMENT FILE" width="0"/>
+                <img src="0b31d05d6b2f9761fb6ca67c1b0ac3724b27f57fc4cb2d7b520f74b1d46a76b5.png" title=" admin enters 'C:\Unicomer\ecosystem-regression/src/test/resources/files/dni.PNG' into INPUT DOCUMENT FILE (completed)" width="0"/>
+                <img src="aa5470b106389b8755cacc39240269ef77ad6cd0df18b1d63de312b974f65647.png" title=" admin clicks on ICON BOX TO UPLOAD DOCUMENTS" width="0"/>
+                <img src="2d852f4d0c2165a21e3adafc05082f0b4e88961a12e400eaae1e1363b71908b2.png" title=" admin clicks on ICON BOX TO UPLOAD DOCUMENTS (completed)" width="0"/>
+                <img src="2d852f4d0c2165a21e3adafc05082f0b4e88961a12e400eaae1e1363b71908b2.png" title=" admin enters 'C:\Unicomer\ecosystem-regression/src/test/resources/files/dni.PNG' into INPUT DOCUMENT FILE" width="0"/>
+                <img src="3a3559a4e8ddaa7c69964f4ea5ace11b8ed2a0bd2f30a24d3afd76ff708034df.png" title=" admin enters 'C:\Unicomer\ecosystem-regression/src/test/resources/files/dni.PNG' into INPUT DOCUMENT FILE (completed)" width="0"/>
+                <img src="2f230689359502a87de14fb0afc69668cf554e1d2f0463a5e00124c4f58a1c69.png" title=" admin clicks on ICON BOX TO UPLOAD DOCUMENTS" width="0"/>
+                <img src="f79dc59ad306aa68d30824551e38c9ce62ef0c8ab0f3c1fa1572f835e97fc09c.png" title=" admin clicks on ICON BOX TO UPLOAD DOCUMENTS (completed)" width="0"/>
+                <img src="f79dc59ad306aa68d30824551e38c9ce62ef0c8ab0f3c1fa1572f835e97fc09c.png" title=" admin enters 'C:\Unicomer\ecosystem-regression/src/test/resources/files/dni.PNG' into INPUT DOCUMENT FILE" width="0"/>
+                <img src="b8edcde88dca2ba7432d2d4da02a8dadc4d117b235f8f3ed085ead9b01aa271d.png" title=" admin enters 'C:\Unicomer\ecosystem-regression/src/test/resources/files/dni.PNG' into INPUT DOCUMENT FILE (completed)" width="0"/>
+                <img src="a72c68dd13ec79ab9d619c355b860db915cbef67b7f9e9617e30b7ad8709b7ef.png" title=" admin clicks on ICON BOX TO UPLOAD DOCUMENTS" width="0"/>
+                <img src="3843b859880feb1182255d9aed70d16b35f089acb4a7ee7435aa801da29e7874.png" title=" admin clicks on ICON BOX TO UPLOAD DOCUMENTS (completed)" width="0"/>
+                <img src="3843b859880feb1182255d9aed70d16b35f089acb4a7ee7435aa801da29e7874.png" title=" admin enters 'C:\Unicomer\ecosystem-regression/src/test/resources/files/dni.PNG' into INPUT DOCUMENT FILE" width="0"/>
+                <img src="9bae9e3009c49f674f314fbad84d1df4566e9e0c670e1a1958bb7839db9d19db.png" title=" admin enters 'C:\Unicomer\ecosystem-regression/src/test/resources/files/dni.PNG' into INPUT DOCUMENT FILE (completed)" width="0"/>
+                <img src="5dfaf7e11ad0d6795640a2015a2a08043fbedf2d64f6bbabb58bfd3663a0214c.png" title=" admin clicks on CONFIRM FORM AND GO TO THE NEXT STEPS" width="0"/>
+                <img src="8449713e6e345afee377ebd6b4c5d1b04c3db372cc19e0ea9109f3fc4ad7078e.png" title=" admin clicks on CONFIRM FORM AND GO TO THE NEXT STEPS (completed)" width="0"/>
+                <img src="c43393b1fab6c5e03ba20c657731209356ad10c88877fcd28288f463bbf38028.png" title=" Admin pre qualify upload documents (completed)" width="0"/>
+                <img src="c43393b1fab6c5e03ba20c657731209356ad10c88877fcd28288f463bbf38028.png" title=" And user enter basic information for Document validation section (completed)" width="0"/>
+                <img src="c43393b1fab6c5e03ba20c657731209356ad10c88877fcd28288f463bbf38028.png" title=" Then validate the &quot;Credit application completed!&quot; that was created" width="0"/>
+                <img src="c43393b1fab6c5e03ba20c657731209356ad10c88877fcd28288f463bbf38028.png" title=" Then validate message new client should be a string containing 'Credit application completed!'" width="0"/>
+                <img src="c43393b1fab6c5e03ba20c657731209356ad10c88877fcd28288f463bbf38028.png" title=" admin clicks on BUTTON SEARCH CLIENT" width="0"/>
+                <img src="52e3551b0564c421cf5a4b64f9e17f9011f3a83c0eb04c2a60c90c4c3d797a12.png" title=" admin clicks on BUTTON SEARCH CLIENT (completed)" width="0"/>
+                <img src="52e3551b0564c421cf5a4b64f9e17f9011f3a83c0eb04c2a60c90c4c3d797a12.png" title=" Then validate message new client should be a string containing 'Credit application completed!' (completed)" width="0"/>
+                <img src="52e3551b0564c421cf5a4b64f9e17f9011f3a83c0eb04c2a60c90c4c3d797a12.png" title=" Then validate the &quot;Credit application completed!&quot; that was created (completed)" width="0"/>
+
+                <img src="7e30211c69c63cd8cb0ba8688927452cc4b87e2f89bd46a073facf47dcc6ca3e.png" title=" 1: 1. New credit application Emma JM ({country=Jamaica, store=COU JM Port Maria, typeId=TRN, documentId=828888807, firstName=Julian, secondName=Saul, firstLastName=Salas, secondLastName=Calderon, gender=Male, birthDate=1983-JAN-1, areaCode=658, numberMovil=1598754, email=r@g.c, marriedStatus=Married, dependsNumber=1, address=This is the address 10, frecuencyPaid=Monthly, income=750000, occupation=Teacher, companyName=UNICOMER SAC, employStartDate=2020-MAY-7, companyParish=Manchester, companyDistrict=Christiana, jobMainActivity=Salary, department=St Mary, district=Annotto Bay, streetResidence=X5X9+QQQ, VEGAS, referenceResidence=79 -81a Road KINGSTON, currentDateAddress=2021-JAN-1, residentStatus=Owner, nameReference1=HERNAN PAREDES, relationship1=Coworker, areaCodeRef=876, numberReference1=1593645, referenceLocation=79 -81a Road KINGSTON, nameReference2=JULIAN ALVAREZ, relationship2=Father, numberReference2=3697415, streetWork=PRINCIPAL STREET, message=Credit application completed!}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.1</span>
+</div>
+</body>
+</html>
