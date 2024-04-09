@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="9bcb632fb3fb633e6dbbb51025292db009ff3e7ec8a7e40c80f8e7c1feadceb4.html">Regression JM</a></span>
+                > <span class="truncate-60"><a
+                    href="76fc158e24b73bc4d1243118530e63f0c708c5397a9bb35f115094c23546304f.html">3. Consult client with Approve Status in Workflow </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="bi bi-chat-text"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-04-2024 10:08</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Regression JM </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="1d0c02fb9cb969bbd9e2f900ec6333e01b070c6fb5e26345e9374169cfab9e68.html">Regression
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="3bd16de32bc8ae0e8db1c058fb25983e627e1955049ec683778609a094e8d801.html">Workflow Consult Client
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5698da923f295f46ce5ab64ced2311fc60caa4e36b32112606d3adcfdce3f60b.html">30 To 60 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Consult client with Approve Status in Workflow
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given User navigate into Workflow "&lt;country&gt;" with "&lt;role&gt;"<br>And Select "&lt;menu&gt;" menu in Workflow<br>When search client by TRN "&lt;trn&gt;"<br>Then validate new status of customer "&lt;message&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="683cf72f98c68a7c6e856f66b91fd12082dc231a434f76c7ec32303c07e728e9.png" title=" 1: 3. Consult client with Approve Status in Workflow ({country=Jamaica, role=Analyst, trn=858888854, menu=Query requests, message=Request approved})" width="0"/>
+                <img src="683cf72f98c68a7c6e856f66b91fd12082dc231a434f76c7ec32303c07e728e9.png" title=" Given User navigate into Workflow &quot;Jamaica&quot; with &quot;Analyst&quot;" width="0"/>
+                <img src="683cf72f98c68a7c6e856f66b91fd12082dc231a434f76c7ec32303c07e728e9.png" title=" Admin navigate" width="0"/>
+                <img src="683cf72f98c68a7c6e856f66b91fd12082dc231a434f76c7ec32303c07e728e9.png" title=" admin opens the browser at https://workflow-uat.unicomer.com/&nbsp;" width="0"/>
+                <img src="4051cc2b9e568f0a5323f7a9f7dbf1d0b03d144fa82ab724725cc2108ff66f65.png" title=" admin opens the browser at https://workflow-uat.unicomer.com/&nbsp; (completed)" width="0"/>
+                <img src="4051cc2b9e568f0a5323f7a9f7dbf1d0b03d144fa82ab724725cc2108ff66f65.png" title=" admin enters 'application.admin@unicomer.com' into ENTER THE USERNAME" width="0"/>
+                <img src="33ee36de4adf5b39590444876cd17028b0ceef2dc18cd8afffaa53a4867989e1.png" title=" admin enters 'application.admin@unicomer.com' into ENTER THE USERNAME (completed)" width="0"/>
+                <img src="33ee36de4adf5b39590444876cd17028b0ceef2dc18cd8afffaa53a4867989e1.png" title=" admin enters '7kR2Voy5W8AN' into ENTER THE PASSWORD" width="0"/>
+                <img src="facf5032a20f093d3dffdbf57ac4c5aa132ac2d371c5cd6cd5f735a57a3d3830.png" title=" admin enters '7kR2Voy5W8AN' into ENTER THE PASSWORD (completed)" width="0"/>
+                <img src="facf5032a20f093d3dffdbf57ac4c5aa132ac2d371c5cd6cd5f735a57a3d3830.png" title=" admin clicks on SUBMIT CREDENTIALS" width="0"/>
+                <img src="4051cc2b9e568f0a5323f7a9f7dbf1d0b03d144fa82ab724725cc2108ff66f65.png" title=" admin clicks on SUBMIT CREDENTIALS (completed)" width="0"/>
+                <img src="4051cc2b9e568f0a5323f7a9f7dbf1d0b03d144fa82ab724725cc2108ff66f65.png" title=" Admin navigate (completed)" width="0"/>
+                <img src="4051cc2b9e568f0a5323f7a9f7dbf1d0b03d144fa82ab724725cc2108ff66f65.png" title=" Given User navigate into Workflow &quot;Jamaica&quot; with &quot;Analyst&quot; (completed)" width="0"/>
+                <img src="4051cc2b9e568f0a5323f7a9f7dbf1d0b03d144fa82ab724725cc2108ff66f65.png" title=" And Select &quot;Query requests&quot; menu in Workflow" width="0"/>
+                <img src="4051cc2b9e568f0a5323f7a9f7dbf1d0b03d144fa82ab724725cc2108ff66f65.png" title=" Admin select menu" width="0"/>
+                <img src="4051cc2b9e568f0a5323f7a9f7dbf1d0b03d144fa82ab724725cc2108ff66f65.png" title=" admin clicks on Menu Home Page" width="0"/>
+                <img src="731e82227c549d44d88ed0b9bf09dc1ea8404842a842588d68df183155d7023f.png" title=" admin clicks on Menu Home Page (completed)" width="0"/>
+                <img src="731e82227c549d44d88ed0b9bf09dc1ea8404842a842588d68df183155d7023f.png" title=" admin clicks on SelectMenu" width="0"/>
+                <img src="7998cfd361e879cdaa28d247bed7d7458592791c640d0c9b5ab3be04a5ed5199.png" title=" admin clicks on SelectMenu (completed)" width="0"/>
+                <img src="7998cfd361e879cdaa28d247bed7d7458592791c640d0c9b5ab3be04a5ed5199.png" title=" Admin select menu (completed)" width="0"/>
+                <img src="7998cfd361e879cdaa28d247bed7d7458592791c640d0c9b5ab3be04a5ed5199.png" title=" And Select &quot;Query requests&quot; menu in Workflow (completed)" width="0"/>
+                <img src="7998cfd361e879cdaa28d247bed7d7458592791c640d0c9b5ab3be04a5ed5199.png" title=" When search client by TRN &quot;858888854&quot;" width="0"/>
+                <img src="7998cfd361e879cdaa28d247bed7d7458592791c640d0c9b5ab3be04a5ed5199.png" title=" Admin search query request" width="0"/>
+                <img src="2f8c4e225201490c9c0dc72d889365e5398fa82d75616c96c7cc7ccafc6af47c.png" title=" admin clicks on Document Type" width="0"/>
+                <img src="f8e6672c248340bce5fcf9e4b01c48b1ae0132e3e73188e2fc6ea66d11c7a030.png" title=" admin clicks on Document Type (completed)" width="0"/>
+                <img src="b32fe81d0724ccc6742accf375b34cde517697c2efe50eb1aa697b6eb3c49801.png" title=" admin enters '858888854' into Number DOI" width="0"/>
+                <img src="3ed82f2447d8777f82b57ba0eeb55f4c9b7f84b81d727808966e86fdfeb8b257.png" title=" admin enters '858888854' into Number DOI (completed)" width="0"/>
+                <img src="3ed82f2447d8777f82b57ba0eeb55f4c9b7f84b81d727808966e86fdfeb8b257.png" title=" admin clicks on Button Search" width="0"/>
+                <img src="fabbda7e2c609df4ca425373be7db7dafd22a6fef0aa919c124847ba1e4dbcba.png" title=" admin clicks on Button Search (completed)" width="0"/>
+                <img src="25f8b6261eabbe61b7dfc183c13344fe674486331964ce93b25331345d8ce29d.png" title=" admin clicks on NEW CREDIT LINE" width="0"/>
+                <img src="e61d6f286f5df137be7d5d40317a8c519f483e1a762325259f183bf7082774cf.png" title=" admin clicks on NEW CREDIT LINE (completed)" width="0"/>
+                <img src="cb217fd46b9c3d16b6c2fef0be1173efc8e892add2390f70d83f2c518a8929af.png" title=" Admin search query request (completed)" width="0"/>
+                <img src="cb217fd46b9c3d16b6c2fef0be1173efc8e892add2390f70d83f2c518a8929af.png" title=" When search client by TRN &quot;858888854&quot; (completed)" width="0"/>
+                <img src="cb217fd46b9c3d16b6c2fef0be1173efc8e892add2390f70d83f2c518a8929af.png" title=" Then validate new status of customer &quot;Request approved&quot;" width="0"/>
+                <img src="cb217fd46b9c3d16b6c2fef0be1173efc8e892add2390f70d83f2c518a8929af.png" title=" Then validate new status customer should be 'Request approved'" width="0"/>
+
+                <img src="cb217fd46b9c3d16b6c2fef0be1173efc8e892add2390f70d83f2c518a8929af.png" title=" 1: 3. Consult client with Approve Status in Workflow ({country=Jamaica, role=Analyst, trn=858888854, menu=Query requests, message=Request approved}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.1</span>
+</div>
+</body>
+</html>
