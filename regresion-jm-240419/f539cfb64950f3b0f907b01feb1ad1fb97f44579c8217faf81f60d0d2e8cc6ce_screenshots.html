@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="a9bb6d3e13eb01f4bd0eb4f3ac5e8124d9df7a168cb80eed0623becbbd370022.html">Regression JM</a></span>
+                > <span class="truncate-60"><a
+                    href="f539cfb64950f3b0f907b01feb1ad1fb97f44579c8217faf81f60d0d2e8cc6ce.html">4. Request Cash Loan in Emma JM </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="bi bi-chat-text"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 19-04-2024 11:17</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Regression JM</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="c68fd6639ab29c4b0ac02a78bc39f4e22557bcaa40ef14c903ac0e584626edfe.html">1 To 2 Minutes
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f7cb42a10b196b1e0a9711bfbed24779680405242cba4b78fc4eb7931faf298e.html">Cash Loan
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="1d0c02fb9cb969bbd9e2f900ec6333e01b070c6fb5e26345e9374169cfab9e68.html">Regression
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Request Cash Loan in Emma JM
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given DataTable customer data<br><table class='embedded'><thead><th>typeId</th><th>documentId</th><th>store</th></thead><tbody><tr><td>&lt;typeId&gt;</td><td>&lt;documentId&gt;</td><td>&lt;store&gt;</td></tr></tbody></table><br>Given DataTable request data<br><table class='embedded'><thead><th>loanAmount</th><th>promotion</th><th>cpi</th><th>store</th><th>term</th><th>isPEP</th><th>customerPEP</th><th>csrNumber</th></thead><tbody><tr><td>&lt;loanAmount&gt;</td><td>&lt;promotion&gt;</td><td>&lt;cpi&gt;</td><td>&lt;store&gt;</td><td>&lt;term&gt;</td><td>&lt;isPEP&gt;</td><td>&lt;customerPEP&gt;</td><td>&lt;csrNumber&gt;</td></tr></tbody></table><br>Given DataTable request data Credit<br><table class='embedded'><tbody><tr><td>statusRequest</td></tr><tr><td>&lt;statusRequest&gt;</td></tr></tbody></table><br>Given the user into EMMA in "&lt;country&gt;" with credentials<br>And select the country emma<br>And select the store in emma<br>And search customer by TRN<br>And fill New Cash Loan form<br>And fill details of Cash Loan</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="85580116e2ef0249ab7525ce2a4eb15d93a006b098cad91149dac0c56c80715b.png" title=" 1: 4. Request Cash Loan in Emma JM ({country=Jamaica, store=COU JM Port Maria, typeId=TRN, documentId=858888889, loanAmount=100000, promotion=Cash loan, cpi=NO, term=18, isPEP=NO, customerPEP=NO, csrNumber=9904013, status=Approved})" width="0"/>
+                <img src="85580116e2ef0249ab7525ce2a4eb15d93a006b098cad91149dac0c56c80715b.png" title=" Given DataTable customer data
+| typeId | documentId | store |
+| TRN | 858888889 | COU JM Port Maria |" width="0"/>
+                <img src="85580116e2ef0249ab7525ce2a4eb15d93a006b098cad91149dac0c56c80715b.png" title=" Given DataTable request data
+| loanAmount | promotion | cpi | store | term | isPEP | customerPEP | csrNumber |
+| 100000 | Cash loan | NO | COU JM Port Maria | 18 | NO | NO | 9904013 |" width="0"/>
+                <img src="85580116e2ef0249ab7525ce2a4eb15d93a006b098cad91149dac0c56c80715b.png" title=" Given DataTable request data Credit
+| statusRequest |
+| &lt;statusRequest&gt; |" width="0"/>
+                <img src="85580116e2ef0249ab7525ce2a4eb15d93a006b098cad91149dac0c56c80715b.png" title=" Given the user into EMMA in &quot;Jamaica&quot; with credentials" width="0"/>
+                <img src="85580116e2ef0249ab7525ce2a4eb15d93a006b098cad91149dac0c56c80715b.png" title=" Admin navigate sit" width="0"/>
+                <img src="85580116e2ef0249ab7525ce2a4eb15d93a006b098cad91149dac0c56c80715b.png" title=" admin opens the browser at https://credits-uat.unicomer.com/" width="0"/>
+                <img src="f5617c8fe62b07c948426df6fc8a801938aac03375de5d46767a02462c048446.png" title=" admin opens the browser at https://credits-uat.unicomer.com/ (completed)" width="0"/>
+                <img src="f5617c8fe62b07c948426df6fc8a801938aac03375de5d46767a02462c048446.png" title=" admin clicks on BUTTON LOGIN" width="0"/>
+                <img src="fc0a70c3dd522f263a08d9a77438e6ed6832e820dbb1b355c77383fb564c16e7.png" title=" admin clicks on BUTTON LOGIN (completed)" width="0"/>
+                <img src="fc0a70c3dd522f263a08d9a77438e6ed6832e820dbb1b355c77383fb564c16e7.png" title=" admin enters 'cristian_nunez@unicomer.com' into ENTER THE USER" width="0"/>
+                <img src="b3dad1fa9dce821d01523520c6dc16566fee31efef64bca8b67c53f08916e084.png" title=" admin enters 'cristian_nunez@unicomer.com' into ENTER THE USER (completed)" width="0"/>
+                <img src="b3dad1fa9dce821d01523520c6dc16566fee31efef64bca8b67c53f08916e084.png" title=" admin clicks on BUTTON SUBMIT" width="0"/>
+                <img src="8c861577e7b468387a854f9d8b4c82b3e7be77cf79a8c2b778783ce6c3c26b9c.png" title=" admin clicks on BUTTON SUBMIT (completed)" width="0"/>
+                <img src="8c861577e7b468387a854f9d8b4c82b3e7be77cf79a8c2b778783ce6c3c26b9c.png" title=" admin enters 'Copo2810.' into ENTER THE PASSWORD" width="0"/>
+                <img src="e9ab6300df56bdd0f886e4e7ab3f35ac03a7abd7d5ecf6eb1631fe40859a0475.png" title=" admin enters 'Copo2810.' into ENTER THE PASSWORD (completed)" width="0"/>
+                <img src="e9ab6300df56bdd0f886e4e7ab3f35ac03a7abd7d5ecf6eb1631fe40859a0475.png" title=" admin clicks on BUTTON SUBMIT" width="0"/>
+                <img src="1c9d5c32f37ca130b629ae1939239e5dc1f8a2104733ace83d37ac853fc9b4de.png" title=" admin clicks on BUTTON SUBMIT (completed)" width="0"/>
+                <img src="811cbcbe5205db3f88a13193a2f0785e4b19233cc14277b5d2001813f135e4f1.png" title=" admin clicks on BUTTON NOT ACTIVE" width="0"/>
+                <img src="85580116e2ef0249ab7525ce2a4eb15d93a006b098cad91149dac0c56c80715b.png" title=" admin clicks on BUTTON NOT ACTIVE (completed)" width="0"/>
+                <img src="83d4c8ef3093ada7a43c0a43c29ff08b2d8bc9a51c39dce40a1282b726529dd9.png" title=" Admin navigate sit (completed)" width="0"/>
+                <img src="83d4c8ef3093ada7a43c0a43c29ff08b2d8bc9a51c39dce40a1282b726529dd9.png" title=" Given the user into EMMA in &quot;Jamaica&quot; with credentials (completed)" width="0"/>
+                <img src="83d4c8ef3093ada7a43c0a43c29ff08b2d8bc9a51c39dce40a1282b726529dd9.png" title=" And select the country emma" width="0"/>
+                <img src="83d4c8ef3093ada7a43c0a43c29ff08b2d8bc9a51c39dce40a1282b726529dd9.png" title=" Admin select country" width="0"/>
+                <img src="83d4c8ef3093ada7a43c0a43c29ff08b2d8bc9a51c39dce40a1282b726529dd9.png" title=" admin clicks on ALERT COUNTRY" width="0"/>
+                <img src="aeb8dd0d7485ad43e4466fc241050e84828c852aa9b78f273438c2dba14edf7c.png" title=" admin clicks on ALERT COUNTRY (completed)" width="0"/>
+                <img src="aeb8dd0d7485ad43e4466fc241050e84828c852aa9b78f273438c2dba14edf7c.png" title=" admin clicks on Select option from list of elements" width="0"/>
+                <img src="22cb8eabeba3d2156ce88e8c083fec8b65666316048be6cad70d9c56685b2404.png" title=" admin clicks on Select option from list of elements (completed)" width="0"/>
+                <img src="eb4b7837471c635ad9490072833070de7ee5e5a5a9caa8fbbb5ece0e0ebbf7c2.png" title=" Admin select country (completed)" width="0"/>
+                <img src="eb4b7837471c635ad9490072833070de7ee5e5a5a9caa8fbbb5ece0e0ebbf7c2.png" title=" And select the country emma (completed)" width="0"/>
+                <img src="eb4b7837471c635ad9490072833070de7ee5e5a5a9caa8fbbb5ece0e0ebbf7c2.png" title=" And select the store in emma" width="0"/>
+                <img src="eb4b7837471c635ad9490072833070de7ee5e5a5a9caa8fbbb5ece0e0ebbf7c2.png" title=" Admin select store" width="0"/>
+                <img src="eb4b7837471c635ad9490072833070de7ee5e5a5a9caa8fbbb5ece0e0ebbf7c2.png" title=" admin clicks on ALERT STORE" width="0"/>
+                <img src="36b8286f6ac608be8fa7c3b38337540e8675d22f0e760a6b9df5232aaad9c2a7.png" title=" admin clicks on ALERT STORE (completed)" width="0"/>
+                <img src="ba3a39d256f553a9dd15e765140c95a026969b9bea941a3f4ae2e26cd0291b88.png" title=" admin clicks on BUTTON CONTINUE JM" width="0"/>
+                <img src="5255d169558fa1f5fee1d2e1dbd567a24f780b6344ff6b1dcc4134b8029405d9.png" title=" admin clicks on BUTTON CONTINUE JM (completed)" width="0"/>
+                <img src="210c3ffc967e99748cfeecf2d6ac09198b92cb8278c4120ce8e61bb07fc59732.png" title=" Admin select store (completed)" width="0"/>
+                <img src="210c3ffc967e99748cfeecf2d6ac09198b92cb8278c4120ce8e61bb07fc59732.png" title=" And select the store in emma (completed)" width="0"/>
+                <img src="210c3ffc967e99748cfeecf2d6ac09198b92cb8278c4120ce8e61bb07fc59732.png" title=" And search customer by TRN" width="0"/>
+                <img src="210c3ffc967e99748cfeecf2d6ac09198b92cb8278c4120ce8e61bb07fc59732.png" title=" Admin search by trn" width="0"/>
+                <img src="210c3ffc967e99748cfeecf2d6ac09198b92cb8278c4120ce8e61bb07fc59732.png" title=" admin enters '858888889' into INSERT DOCUMENT" width="0"/>
+                <img src="b14e9c6fb67a75e12151469cb8a79b28d685eb85cbc9f5fe6cec32927d5e5520.png" title=" admin enters '858888889' into INSERT DOCUMENT (completed)" width="0"/>
+                <img src="b14e9c6fb67a75e12151469cb8a79b28d685eb85cbc9f5fe6cec32927d5e5520.png" title=" admin clicks on BUTTON TO CHECK IF CLIENT ALREADY EXIST" width="0"/>
+                <img src="ac2b3fc0a67bc3102cc470458914ec80823bef9159d57e5c541c44cb28e5484c.png" title=" admin clicks on BUTTON TO CHECK IF CLIENT ALREADY EXIST (completed)" width="0"/>
+                <img src="ac2b3fc0a67bc3102cc470458914ec80823bef9159d57e5c541c44cb28e5484c.png" title=" Admin search by trn (completed)" width="0"/>
+                <img src="b91d653ce57b8f7322f2a5110b7a3fdf56073783f5b4344ec912fdd97f48a74d.png" title=" And search customer by TRN (completed)" width="0"/>
+                <img src="b91d653ce57b8f7322f2a5110b7a3fdf56073783f5b4344ec912fdd97f48a74d.png" title=" And fill New Cash Loan form" width="0"/>
+                <img src="b91d653ce57b8f7322f2a5110b7a3fdf56073783f5b4344ec912fdd97f48a74d.png" title=" Admin new cash loan" width="0"/>
+                <img src="b91d653ce57b8f7322f2a5110b7a3fdf56073783f5b4344ec912fdd97f48a74d.png" title=" admin clicks on BUTTON NEW CASH LOAN" width="0"/>
+                <img src="311ea73b72147e7e070385a525abaa317400a308c3eb6524b3fc6e508458872b.png" title=" admin clicks on BUTTON NEW CASH LOAN (completed)" width="0"/>
+                <img src="311ea73b72147e7e070385a525abaa317400a308c3eb6524b3fc6e508458872b.png" title=" Admin new cash loan (completed)" width="0"/>
+                <img src="302f1b9d0bd1bcf216f209f1e66eb3a6ed88bb30764a59d7d8a955a588f95529.png" title=" Admin request cash loan" width="0"/>
+                <img src="302f1b9d0bd1bcf216f209f1e66eb3a6ed88bb30764a59d7d8a955a588f95529.png" title=" Admin write into" width="0"/>
+                <img src="302f1b9d0bd1bcf216f209f1e66eb3a6ed88bb30764a59d7d8a955a588f95529.png" title=" admin enters '100000' into INSERT AMOUNT" width="0"/>
+                <img src="be02d3d5b825593a8349274c10eac2376b5c30fd35fe761bafbd8338f35c9bce.png" title=" admin enters '100000' into INSERT AMOUNT (completed)" width="0"/>
+                <img src="be02d3d5b825593a8349274c10eac2376b5c30fd35fe761bafbd8338f35c9bce.png" title=" admin enters '100000' into INSERT AMOUNT" width="0"/>
+                <img src="d9cd7fd4a4acf3b96617f661eb70bfc735c1e2fadf69930d601dd351e204fcd2.png" title=" admin enters '100000' into INSERT AMOUNT (completed)" width="0"/>
+                <img src="d9cd7fd4a4acf3b96617f661eb70bfc735c1e2fadf69930d601dd351e204fcd2.png" title=" admin enters '100000' into INSERT AMOUNT" width="0"/>
+                <img src="d77725057d220284f00066b3d48a97d863e75c7d76c4f221c23616f67798c037.png" title=" admin enters '100000' into INSERT AMOUNT (completed)" width="0"/>
+                <img src="d77725057d220284f00066b3d48a97d863e75c7d76c4f221c23616f67798c037.png" title=" admin enters '100000' into INSERT AMOUNT" width="0"/>
+                <img src="ba45f315d311bd568fb44314038d50f77f4dbced56d61910d92568ef78c0eca7.png" title=" admin enters '100000' into INSERT AMOUNT (completed)" width="0"/>
+                <img src="ba45f315d311bd568fb44314038d50f77f4dbced56d61910d92568ef78c0eca7.png" title=" admin enters '100000' into INSERT AMOUNT" width="0"/>
+                <img src="c467ab38e98d3cd551c2c2aa6348a50c2517416d186618d52a1211da1b0eade1.png" title=" admin enters '100000' into INSERT AMOUNT (completed)" width="0"/>
+                <img src="c467ab38e98d3cd551c2c2aa6348a50c2517416d186618d52a1211da1b0eade1.png" title=" admin enters '100000' into INSERT AMOUNT" width="0"/>
+                <img src="0ce8860f92cb72da25d88a518c932cb5a2ae61de9a8c51da26690e06333d9317.png" title=" admin enters '100000' into INSERT AMOUNT (completed)" width="0"/>
+                <img src="0ce8860f92cb72da25d88a518c932cb5a2ae61de9a8c51da26690e06333d9317.png" title=" admin enters '100000' into INSERT AMOUNT" width="0"/>
+                <img src="b6a1ffd538f4bde0b064fda737edcc04a1a43ceabade1da9c77fa068154317d5.png" title=" admin enters '100000' into INSERT AMOUNT (completed)" width="0"/>
+                <img src="b6a1ffd538f4bde0b064fda737edcc04a1a43ceabade1da9c77fa068154317d5.png" title=" admin enters '100000' into INSERT AMOUNT" width="0"/>
+                <img src="6c64d30aa0f06c35580c5ed2ee35131627e188f6d1f90512adf49944cd6adc66.png" title=" admin enters '100000' into INSERT AMOUNT (completed)" width="0"/>
+                <img src="6c64d30aa0f06c35580c5ed2ee35131627e188f6d1f90512adf49944cd6adc66.png" title=" Admin write into (completed)" width="0"/>
+                <img src="6c64d30aa0f06c35580c5ed2ee35131627e188f6d1f90512adf49944cd6adc66.png" title=" admin clicks on DROPDOWN TO SELECT PROMOTION" width="0"/>
+                <img src="a9ca788eba417b823c79ffe2066938871cfacca39348303960114396a37dd537.png" title=" admin clicks on DROPDOWN TO SELECT PROMOTION (completed)" width="0"/>
+                <img src="a9ca788eba417b823c79ffe2066938871cfacca39348303960114396a37dd537.png" title=" admin clicks on Select option from list of elements" width="0"/>
+                <img src="e38b0d0d5acd8e44b88b9d9c1223f04b4a7954a708362e75fc1013a9fa9d91a8.png" title=" admin clicks on Select option from list of elements (completed)" width="0"/>
+                <img src="2324c193167ab790e3bfc1845d71b102774ad8dbbe08fcce4d22fd1d5d8ff305.png" title=" admin clicks on BUTTON CALCULATE DETAILS" width="0"/>
+                <img src="3aa7928b31c4ddac88ccaf1d143db6ddfdee7ce83510d7826cfef6c8f12884e2.png" title=" admin clicks on BUTTON CALCULATE DETAILS (completed)" width="0"/>
+                <img src="3aa7928b31c4ddac88ccaf1d143db6ddfdee7ce83510d7826cfef6c8f12884e2.png" title=" Admin request cash loan (completed)" width="0"/>
+                <img src="38c836a0a0abe90cc52728803ba98054da6e26c9dea5d6810e250850b2122956.png" title=" And fill New Cash Loan form (completed)" width="0"/>
+                <img src="38c836a0a0abe90cc52728803ba98054da6e26c9dea5d6810e250850b2122956.png" title=" And fill details of Cash Loan" width="0"/>
+                <img src="38c836a0a0abe90cc52728803ba98054da6e26c9dea5d6810e250850b2122956.png" title=" Admin details cash loan" width="0"/>
+                <img src="38c836a0a0abe90cc52728803ba98054da6e26c9dea5d6810e250850b2122956.png" title=" admin clicks on SELECT" width="0"/>
+                <img src="477e1f6735c279d859264c9ba800a5f1844f1db2f36da8500c67ed47c11f2973.png" title=" admin clicks on SELECT (completed)" width="0"/>
+                <img src="240a73eefc69c7a885a4c78fc84ed15fea8fbbe2396731636ca2874ca707f5fc.png" title=" admin clicks on SHOW DETAILS" width="0"/>
+                <img src="e151450d4cefef47ac639a3208709121cc8e4ac3368deae8c36f0b27d5501ad6.png" title=" admin clicks on SHOW DETAILS (completed)" width="0"/>
+                <img src="e151450d4cefef47ac639a3208709121cc8e4ac3368deae8c36f0b27d5501ad6.png" title=" admin clicks on SHOW DETAILS" width="0"/>
+                <img src="5216bf75ed99ce24206888facadc1a9cc0aed35233e4a2e3b8f98713dc78ab7f.png" title=" admin clicks on SHOW DETAILS (completed)" width="0"/>
+                <img src="5216bf75ed99ce24206888facadc1a9cc0aed35233e4a2e3b8f98713dc78ab7f.png" title=" admin clicks on SHOW DETAILS" width="0"/>
+                <img src="b55a65a2811aa1f4c31c4517b50965f5aaca90d51dffe8c6ea08cc7ae17b34d6.png" title=" admin clicks on SHOW DETAILS (completed)" width="0"/>
+                <img src="b55a65a2811aa1f4c31c4517b50965f5aaca90d51dffe8c6ea08cc7ae17b34d6.png" title=" admin clicks on IS NOT PEP" width="0"/>
+                <img src="5bafe3453f94b5db0d5727f0024dcc7c1ebbbe776202a0c64980dc782a3fddb9.png" title=" admin clicks on IS NOT PEP (completed)" width="0"/>
+                <img src="1e7dfdfc88cb83bfac8cc4282965deb91b35325967572e68181bde2e7e0d9ee7.png" title=" admin clicks on IS PROCESSING" width="0"/>
+                <img src="469471a58b3eaab17de3062f13e89f32158be97a8d01354dc7994e428e453f84.png" title=" admin clicks on IS PROCESSING (completed)" width="0"/>
+                <img src="19011bce90793e95d24d9e1e53b240afd87deb6590734a643f78db103c5760e0.png" title=" admin enters '9904013' into CSR NUMBER" width="0"/>
+                <img src="ce94fdc28d0b6b5d72fbe1389ca161d876a1e0ef2b8591403e8db8812c6a8d22.png" title=" admin enters '9904013' into CSR NUMBER (completed)" width="0"/>
+                <img src="ce94fdc28d0b6b5d72fbe1389ca161d876a1e0ef2b8591403e8db8812c6a8d22.png" title=" admin clicks on CONFIRM CASH LOAN" width="0"/>
+                <img src="d3c1011c6780cd019c9d50f1ca6d00afbd443a80c29ac47de64fbb18335fc480.png" title=" admin clicks on CONFIRM CASH LOAN (completed)" width="0"/>
+                <img src="d3c1011c6780cd019c9d50f1ca6d00afbd443a80c29ac47de64fbb18335fc480.png" title=" Admin details cash loan (completed)" width="0"/>
+                <img src="d87e1939394d39a5980a7b7de3c7131d5cb89b59821952066dd0474daa7d3107.png" title=" And fill details of Cash Loan (completed)" width="0"/>
+
+                <img src="9c204c3ec4f94dadf15767081c26aabdb15c848335a6b7300519496f48394fe4.png" title=" 1: 4. Request Cash Loan in Emma JM ({country=Jamaica, store=COU JM Port Maria, typeId=TRN, documentId=858888889, loanAmount=100000, promotion=Cash loan, cpi=NO, term=18, isPEP=NO, customerPEP=NO, csrNumber=9904013, status=Approved}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.1</span>
+</div>
+</body>
+</html>
